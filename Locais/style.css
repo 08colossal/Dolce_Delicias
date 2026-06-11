@@ -4,7 +4,7 @@
 /* Textos e mapa */
 #local_1{
     min-height: 35rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("/img-teste/biopark.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img-teste/biopark.jpg");
     background-size:cover;
     background-position: center;
     padding: 2rem 10%;
@@ -18,7 +18,7 @@
 
 #local_2{
     min-height: 35rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("/img-teste/biopark.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img-teste/biopark.jpg");
     background-size:cover;
     background-position: center;
     padding: 2rem 10%;
@@ -32,7 +32,7 @@
 
 #local_3{
     min-height: 35rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("/img-teste/biopark.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img-teste/biopark.jpg");
     background-size:cover;
     background-position: center;
     padding: 2rem 10%;
