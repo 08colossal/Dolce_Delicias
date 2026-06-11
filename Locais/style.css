@@ -44,20 +44,20 @@
 }
 
 .mapa {
-  width: 20rem;
-  height: 9rem;
+  width: 15rem;
+  height: 5rem;
   overflow: hidden; /* esconde as bordas do iframe */
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: none;
 }
 
 .mapa iframe {
   position: absolute;
-  top: -70px;
+  top: -50px;
   left: 0;
   width: 100%;
   height: 200%;
