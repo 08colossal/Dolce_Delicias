@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="produtos.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--  MENU  -->
+
+
+    <!--  CORPO  -->
+    <div class="tela">
+        <div class="linha-filtros barra-filtros">
+            <div id="tags-container" class="tags-container"></div>
+            
+            <div class="menu-dropdown">
+                <button id="btn-filtros-gatilho" class="btn-filtros">Filtros ▾</button>
+                <div id="dropdown-conteudo" class="dropdown-conteudo">
+                    <div class="dropdown-secao">
+                        <h4>Categorias</h4>
+                        <button class="opcao-filtro" data-valor="vegano">Vegano</button>
+                        <button class="opcao-filtro" data-valor="sem-lactose">Sem Lactose</button>
+                        <button class="opcao-filtro" data-valor="sem-açucar">Sem Açúcar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="linha-filtros">
+
+        <div class="secao-unidade" id="secao-bpk">
+            <h2>Unidade Biopark</h2>
+            <div id="container-bpk" class="produtos-grid"></div>
+            <hr class="linha-filtros">
+        </div>
+
+        <div class="secao-unidade" id="secao-sul">
+            <h2>Unidade Zona Sul</h2>
+            <div id="container-sul" class="produtos-grid"></div>
+            <hr class="linha-filtros">
+        </div>
+
+        <div class="secao-unidade" id="secao-3">
+            <h2>Unidade Colégio</h2>
+            <div id="container-3" class="produtos-grid"></div>
+            <hr class="linha-filtros">
+        </div>
+
+    </div>
+
+    <!-- RODAPÉ  -->
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+body{
+    align-items: center;
+    display: flex;
+    flex: content;
+}
+
+.tela{
+  padding:3rem;
+  width:72rem;
+  height: auto;
+  background-color: none; /* colocar a mesma cor do fundo */
+  border-radius:2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* mobile */
+@media (max-width: 767px){
+    .tela{
+        width:100%;
+        padding: 1rem;
+    }
+}
+
+
+.linha-filtros{
+ width:100%;
+ margin-top: 1rem;
+ margin-bottom: 1rem;
+}
+
+.produtos-grid {
+  width:90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-produto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.produto-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Garante que a foto não fique distorcida */
+}
+
+.produto-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.preco-tag {
+  font-weight: bold;
+  color: #2ecc71;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.barra-filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.tags-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* A tag cinza igual ao seu print */
+.tag-filtro {
+  display: flex;
+  align-items: center;
+  background-color: rgba(220, 220, 220, 0.8);
+  color: #333;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+
+/* O botão 'X' dentro da tag cinza */
+.btn-fechar-tag {
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.btn-fechar-tag:hover {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+/* O botão 'Filtros' na direita */
+.btn-filtros {
+  background-color: #f1f2f6;
+  color: #000;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Container do botão de filtro para posicionar o menu corretamente */
+.menu-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* O Menu de Opções suspenso (Visual de Vidro/Glassmorphism para combinar) */
+.dropdown-conteudo {
+  display: none; /* Começa escondido */
+  position: absolute;
+  right: 0; /* Alinha o menu pela direita do botão */
+  top: 110%; /* Joga o menu um pouquinho para baixo do botão */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  z-index: 10; /* Garante que o menu flutue por cima dos cards de produto */
+}
+
+/* Classe que o JS vai colocar/tirar para abrir e fechar o menu */
+.dropdown-conteudo.mostrar {
+  display: block;
+}
+
+.dropdown-secao h4 {
+  margin: 8px 0 4px 0;
+  font-size: 0.8rem;
+  color: #777;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+/* Botões de opção dentro do menu */
+.opcao-filtro {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.opcao-filtro:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Efeito cinza claro no mouse */
+}
+
+.secao-unidade h2 {
+  width: 90%;
+  margin: 2rem auto 0.5rem auto;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Garante que as linhas fiquem centralizadas junto com os títulos */
+.linha-filtros {
+  margin-left: auto;
+  margin-right: auto;
+}
