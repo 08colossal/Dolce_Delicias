@@ -6,6 +6,7 @@ body{
     align-items: center;
     display: flex;
     flex: content;
+    background-color: rgb(7, 7, 7);
 }
 
 .tela{
@@ -75,6 +76,7 @@ body{
   flex-direction: column;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  background: rgb(255, 240, 240);
 }
 
 .produto-img {
@@ -115,8 +117,7 @@ body{
 .tag-filtro {
   display: flex;
   align-items: center;
-  background-color: rgb(241, 241, 241);
-  color: rgb(51, 51, 51);
+  background-color: rgba(255, 255, 255, 0.137);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -125,7 +126,7 @@ body{
 
 /* O botão 'X' dentro da tag cinza */
 .btn-fechar-tag {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgb(0, 0, 0);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -168,7 +169,7 @@ body{
   position: absolute;
   right: 0; /* Alinha o menu pela direita do botão */
   top: 110%; /* Joga o menu um pouquinho para baixo do botão */
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   min-width: 200px;
