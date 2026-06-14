@@ -56,22 +56,25 @@ function filtrarEProjetarProdutos() {
 }
 
 function renderizarTags() {
-  tagsContainer.innerHTML = ""; 
+  tagsContainer.innerHTML = "";
 
   filtrosAtivos.forEach(filtro => {
     const tag = document.createElement('div');
+
     tag.classList.add('tag-filtro');
 
     tag.innerHTML = `
       <button class="btn-fechar-tag" data-filtro="${filtro}">✕</button>
-      <span>${formatarNomeFiltro(filtro)}</span>
+      <span class="${filtro}">
+        ${formatarNomeFiltro(filtro)}
+      </span>
     `;
 
     tagsContainer.appendChild(tag);
   });
 
   document.querySelectorAll('.btn-fechar-tag').forEach(botao => {
-    botao.removeEventListener('click', gerenciarRemocaoTag); 
+    botao.removeEventListener('click', gerenciarRemocaoTag);
     botao.addEventListener('click', gerenciarRemocaoTag);
   });
 }
