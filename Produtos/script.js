@@ -62,10 +62,8 @@ function renderizarTags() {
     const tag = document.createElement('div');
 
     tag.classList.add('tag-filtro');
-
     tag.innerHTML = `
-      <button class="btn-fechar-tag" data-filtro="${filtro}">✕</button>
-      <span class="${filtro}">
+      <span class="btn-fechar-tag" class="${filtro}" data-filtro="${filtro}">✧
         ${formatarNomeFiltro(filtro)}
       </span>
     `;
@@ -73,6 +71,7 @@ function renderizarTags() {
     tagsContainer.appendChild(tag);
   });
 
+  //antes era um botão, agr é apenas o filtro
   document.querySelectorAll('.btn-fechar-tag').forEach(botao => {
     botao.removeEventListener('click', gerenciarRemocaoTag);
     botao.addEventListener('click', gerenciarRemocaoTag);

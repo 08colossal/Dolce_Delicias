@@ -1,12 +1,22 @@
 :root {
   --amarelo: #ffc400;
+  --vermelho:red;
+  --azul-filtro:rgb(5, 52, 105);
+  --verde-filtro:rgb(52, 78, 11);
+  --rosa-filtro:rgb(196, 2, 76);
+  --preto:rgb(36, 36, 36);
+  --branco:white;
+  --marrom:rgb(151, 123, 99);
+  --fundo:rgb(247, 235, 230);
+  --texto:#d40000;
+  --tag:rgba(226, 155, 0, 0.973);
 }
 
 body{
     align-items: center;
     display: flex;
     flex: content;
-    background-color: rgb(7, 7, 7);
+    background-color: var(--fundo);
 }
 
 .tela{
@@ -31,20 +41,20 @@ body{
 .tag-filtro{
     padding: 8px 12px;
     border-radius: 20px;
-    font-size: 14px;
+    font-weight:bold;
 }
 
 /* cada categoria uma cor */
 .vegano{
-    color: rgb(114, 209, 36);
+    color: var(--tag);
 }
 
 .sem-lactose{
-    color: rgb(130, 206, 236);
+    color: var(--tag);
 }
 
 .sem-açucar{
-    color: rgb(239, 186, 255);
+    color: var(--tag);
 }
 
 
@@ -56,7 +66,7 @@ body{
  height: 0.1rem;
  border-radius: 1rem;
  border:none;
- background-color: var(--amarelo);
+ background-color: var(--texto);
 }
 
 .produtos-grid {
@@ -68,14 +78,13 @@ body{
 }
 
 .card-produto {
-  border: 1px solid #ddd;
+  border: 0px solid #dddddd00;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   background: rgb(255, 240, 240);
 }
 
@@ -86,6 +95,7 @@ body{
 }
 
 .produto-info {
+  color: var(--preto);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -95,7 +105,7 @@ body{
 
 .preco-tag {
   font-weight: bold;
-  color: #2ecc71;
+  color: var(--tag);
   font-size: 1.2rem;
   margin-top: 10px;
 }
@@ -117,7 +127,8 @@ body{
 .tag-filtro {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.137);
+  backdrop-filter: blur(10px);
+  background-color: var(--branco);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -126,30 +137,29 @@ body{
 
 /* O botão 'X' dentro da tag cinza */
 .btn-fechar-tag {
-  background: rgb(0, 0, 0);
-  color: #fff;
+  background:none;
+  color: var(--marrom);
   border: none;
   border-radius: 50%;
-  width: 18px;
-  height: 18px;
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
   cursor: pointer;
-  font-size: 0.75rem; 
+  font-size: 0.9rem; 
   font-weight: bold;
-  margin-left: -0.7rem;
 }
 
 .btn-fechar-tag:hover {
-  background: rgba(255, 0, 0, 0.6);
+  color:var(--vermelho);
 }
 
 /* O botão 'Filtros' na direita */
 .btn-filtros {
-  background-color: var(--amarelo);
-  color: #000;
+  background-color: var(--texto);
+  color: var(--branco);
   border: none;
   padding: 10px 24px;
   border-radius: 12px;
@@ -188,7 +198,7 @@ body{
 .dropdown-secao h4 {
   margin: 8px 0 4px 0;
   font-size: 0.8rem;
-  color: var(--amarelo);
+  color: var(--texto);
   text-transform: uppercase;
   font-family: sans-serif;
 }
@@ -213,9 +223,9 @@ body{
 
 .secao-unidade h2 {
   width: 90%;
-  margin: 2rem auto 0.5rem auto;
+  margin: 1rem auto 0.5rem 1rem;
   font-family: sans-serif;
-  color: var(--amarelo);
+  color: var(--texto);
 }
 
 /* Garante que as linhas fiquem centralizadas junto com os títulos */
