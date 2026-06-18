@@ -10,13 +10,13 @@ const secoes = {
     bloco: document.getElementById('secao-bpk'),
     grid: document.getElementById('container-bpk')
   },
-  sul: {
-    bloco: document.getElementById('secao-sul'),
-    grid: document.getElementById('container-sul')
+  "cantina-bpk": {
+    bloco: document.getElementById('secao-cantina'),
+    grid: document.getElementById('container-cantina')
   },
-  colegio: {
-    bloco: document.getElementById('secao-3'),
-    grid: document.getElementById('container-3')
+  encomendas: {
+    bloco: document.getElementById('secao-encomendas'),
+    grid: document.getElementById('container-encomendas')
   }
 };
 
@@ -38,13 +38,13 @@ function filtrarEProjetarProdutos() {
 
         const card = document.createElement('div');
         card.classList.add('card-produto');
-        const ingredientesTexto = produto.ingredientes.join(', ');
+        const ingredientesTexto = produto.ingredientes || "";
 
         card.innerHTML = `
           <img src="${produto.imagem}" alt="${produto.nome}" class="produto-img">
           <div class="produto-info">
             <h3>${produto.nome}</h3>
-            <p class="ingredientes"><strong>Ingredientes:</strong> ${ingredientesTexto}</p>
+            <p class="ingredientes">${ingredientesTexto}</p>
             <div class="preco-tag">R$ ${produto.preco.toFixed(2).replace('.', ',')}</div>
           </div>
         `;
@@ -85,9 +85,11 @@ function gerenciarRemocaoTag(e) {
   filtrarEProjetarProdutos();
 }
 
+ //* encomendas bpk cantina-bpk
 function formatarNomeFiltro(nome) {
-  if (nome === 'bpk') return 'Biopark';
-  if (nome === 'sul') return 'Zona Sul';
+  if (nome === 'bpk') return 'Cardápio Geral';
+  if (nome === 'cantina-bpk') return 'Cantina Biopark';
+  if (nome === 'encomendas') return 'Encomendas';
   return nome.charAt(0).toUpperCase() + nome.slice(1).replace('-', ' ');
 }
 

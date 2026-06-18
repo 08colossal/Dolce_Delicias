@@ -1,3 +1,7 @@
+/* ==========================================================================
+   SEÇÃO: CONFIGURAÇÃO DO MENU MOBILE (SCRIPT)
+   ========================================================================== */
+
 class MobileNavbar {
     constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);

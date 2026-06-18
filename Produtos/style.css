@@ -1,9 +1,6 @@
 :root {
-  --amarelo: #ffc400;
-  --vermelho:red;
-  --azul-filtro:rgb(5, 52, 105);
-  --verde-filtro:rgb(52, 78, 11);
-  --rosa-filtro:rgb(196, 2, 76);
+  --amarelo: #FDB44D;
+  --vermelho:#FF1E2C;
   --preto:rgb(36, 36, 36);
   --branco:white;
   --marrom:rgb(151, 123, 99);
@@ -43,20 +40,6 @@ body{
     border-radius: 20px;
     font-weight:bold;
 }
-
-/* cada categoria uma cor */
-.vegano{
-    color: var(--tag);
-}
-
-.sem-lactose{
-    color: var(--tag);
-}
-
-.sem-açucar{
-    color: var(--tag);
-}
-
 
 
 .linha-filtros{
@@ -99,7 +82,8 @@ body{
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-grow: 1;
 }
 
@@ -107,7 +91,7 @@ body{
   font-weight: bold;
   color: var(--tag);
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .barra-filtros {

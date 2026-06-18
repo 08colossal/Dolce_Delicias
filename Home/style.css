@@ -1,3 +1,7 @@
+/* ==========================================================================
+   SEÇÃO 2.1: CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
@@ -17,6 +21,11 @@ a:hover {
     opacity: 0.8;
 }
 
+
+/* ==========================================================================
+   SEÇÃO 2.2: CABEÇALHO E MENU DE NAVEGAÇÃO (NAVBAR)
+   ========================================================================== */
+
 .logo {
     font-size: 24px;
     text-transform: uppercase;
@@ -31,7 +40,7 @@ nav {
     background-color: #F9A03F;
     padding: 0 32px;
     position: fixed;
-    width: 100%;
+    width: 100%; 
     top: 0;
     z-index: 1000;
 }
@@ -58,6 +67,11 @@ nav {
     margin: 5px 0;
     transition: 0.3s;
 }
+
+
+/* ==========================================================================
+   SEÇÃO 2.3: RESPONSIVIDADE (MEDIA QUERIES) E ANIMAÇÕES
+   ========================================================================== */
 
 @media (max-width: 768px) {
     .nav-list {
@@ -110,6 +124,7 @@ nav {
     }
 }
 
+/* Efeito de X no menu mobile quando ativo */
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -119,6 +134,11 @@ nav {
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+
+/* ==========================================================================
+   SEÇÃO 2.4: CONTEÚDO PRINCIPAL - VÍDEO DE DESTAQUE
+   ========================================================================== */
 
 .video-container{
     width: 100%;
@@ -136,6 +156,11 @@ video {
     margin: 50px auto;   
 }
 
+
+/* ==========================================================================
+   SEÇÃO 2.5: CONTEÚDO PRINCIPAL - CARDS DE LOCAIS / PRODUTOS
+   ========================================================================== */
+
 .container {
     background-color: #F9A03F;
     width: 100%;
@@ -146,7 +171,7 @@ video {
 
 .card-list {
     display: flex;       
-    gap: 30px;           
+    gap: 30px;          
     justify-content: center; 
     flex-wrap: wrap;     
     max-width: 1200px;
@@ -167,7 +192,6 @@ video {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 
 .card-list .card-item .link-imagem {
     width: 100%;
@@ -211,7 +235,6 @@ video {
     pointer-events: none;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-
 }
 
 .card-list .card-item .link-imagem:hover {
@@ -223,6 +246,11 @@ video {
     opacity: 1;
     transform: translateY(0); 
 }
+
+
+/* ==========================================================================
+   SEÇÃO 2.6: SEÇÃO INTEGRADA DO INSTAGRAM
+   ========================================================================== */
 
 .instagram-section {
     background-color: #F4EED4;
@@ -305,6 +333,11 @@ video {
     opacity: 1; 
 }
 
+
+/* ==========================================================================
+   SEÇÃO 2.7: RODAPÉ da PÁGINA (FOOTER)
+   ========================================================================== */
+
 footer {
     width: 100%;
     color: #3D261D;
@@ -319,7 +352,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
-    gap: 2rem; /* Adicionado para espaçamento em telas menores */
+    gap: 2rem;
 }
 
 #footer-content h1 {
@@ -328,7 +361,7 @@ footer {
 
 #footer-socialmedia {
     display: flex;
-    gap: 1rem; /* Ajustado para os círculos não ficarem longe demais */
+    gap: 1rem;
     margin-top: 1.5rem;
 }
 
@@ -338,7 +371,7 @@ footer {
     justify-content: center;
     height: 2.5rem;
     width: 2.5rem;
-    color: #FFFFFF; /* Cor do ícone branca para contrastar com os fundos coloridos */
+    color: #FFFFFF;
     border-radius: 50%;
     transition: all 0.4s;
 }
@@ -352,7 +385,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* CORREÇÃO DO INSTAGRAM: Escrita correta 'linear-gradient' */
+/* Cores específicas das redes sociais no rodapé */
 #instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
@@ -377,7 +410,6 @@ footer {
     transition: all 0.4s;
 }
 
-/* CORREÇÃO DO PONTO E VÍGULA EXTRA DEPOIS DA CHAVE */
 .footer-list .footer-link:hover {
     color: #7f37c9;
 }
