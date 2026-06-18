@@ -90,6 +90,9 @@ function formatarNomeFiltro(nome) {
   if (nome === 'bpk') return 'Cardápio Geral';
   if (nome === 'cantina-bpk') return 'Cantina Biopark';
   if (nome === 'encomendas') return 'Encomendas';
+
+  if (nome === 'assados') return 'Salgados';
+
   return nome.charAt(0).toUpperCase() + nome.slice(1).replace('-', ' ');
 }
 

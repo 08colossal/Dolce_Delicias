@@ -159,6 +159,7 @@ body{
 
 /* O Menu de Opções suspenso (Visual de Vidro/Glassmorphism para combinar) */
 .dropdown-conteudo {
+  
   display: none; /* Começa escondido */
   position: absolute;
   right: 0; /* Alinha o menu pela direita do botão */
@@ -179,12 +180,27 @@ body{
   display: block;
 }
 
+.dropdown-secao button{
+  text-align: start;
+}
+
 .dropdown-secao h4 {
   margin: 8px 0 4px 0;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: var(--texto);
   text-transform: uppercase;
   font-family: sans-serif;
+  text-align: start;
+}
+
+.dropdown-secao h3{
+  margin: 8px 0 4px 0;
+  font-size: 0.79rem;
+  color: var(--preto);
+  text-transform: uppercase;
+  font-family: sans-serif;
+  text-align: start;
+
 }
 
 /* Botões de opção dentro do menu */
@@ -202,14 +218,16 @@ body{
 }
 
 .opcao-filtro:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Efeito cinza claro no mouse */
+  background-color: rgba(0, 0, 0, 0.05);
+  color:var(--preto);
 }
 
 .secao-unidade h2 {
   width: 90%;
   margin: 1rem auto 0.5rem 1rem;
-  font-family: sans-serif;
+  font-family:sans-serif;
   color: var(--texto);
+  
 }
 
 /* Garante que as linhas fiquem centralizadas junto com os títulos */
