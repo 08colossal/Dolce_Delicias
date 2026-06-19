@@ -67,7 +67,7 @@ body {
   flex-direction: column;
   backdrop-filter: blur(10px);
   background: rgb(255, 240, 240);
-  min-height: 400px; /* Mudado de rem para px para alinhar com a imagem */
+  min-height: auto; 
   height: 100%;
 }
 
