@@ -242,7 +242,7 @@ body {
 
   .card-produto {
     width: 100% !important;
-    min-height: 200px !important;
+    min-height: 50px !important;
     height: 100% !important;
   }
 
