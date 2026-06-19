@@ -63,7 +63,7 @@ function renderizarTags() {
 
     tag.classList.add('tag-filtro');
     tag.innerHTML = `
-      <span class="btn-fechar-tag" class="${filtro}" data-filtro="${filtro}">🗙
+      <span class="btn-fechar-tag" class="${filtro}" data-filtro="${filtro}">X
         ${formatarNomeFiltro(filtro)}
       </span>
     `;
