@@ -278,6 +278,31 @@ body {
     background: rgba(255, 255, 255, 0.98) !important; 
     box-shadow: 0px 8px 24px rgba(0,0,0,0.3) !important;
   }
+  
+  .btn-fechar-tag {
+    display: inline-block !important;
+    font-size: 0.85rem !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    margin-right: 6px !important;
+    color: var(--marrom) !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .tag-filtro {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important; 
+  }
+  
+  .tags-container {
+    display: flex !important;
+    gap: 6px !important;
+    align-items: center !important;
+  }
 }
 
 @media (min-width: 768px) {
