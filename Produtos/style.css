@@ -1,19 +1,224 @@
 :root {
   --amarelo: #FDB44D;
-  --vermelho:#FF1E2C;
-  --preto:rgb(36, 36, 36);
-  --branco:white;
-  --marrom:rgb(151, 123, 99);
-  --fundo:rgb(247, 235, 230);
-  --texto:#d40000;
-  --tag:rgba(226, 155, 0, 0.973);
+  --vermelho: #FF1E2C;
+  --preto: rgb(36, 36, 36);
+  --branco: white;
+  --marrom: rgb(151, 123, 99);
+  --fundo: rgb(247, 235, 230);
+  --texto: #d40000;
+  --tag: rgba(226, 155, 0, 0.973);
 }
 
-body{
-    align-items: center;
-    display: flex;
-    flex: center;
-    background-color: var(--fundo);
+body {
+  align-items: center;
+  display: flex;
+  background-color: var(--fundo);
+}
+
+.tela {
+  padding: 0 3rem;
+  height: auto;
+  background-color: transparent;
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tag-filtro {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.linha-filtros {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 0.1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--texto);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- CONFIGURAÇÃO PADRÃO --- */
+.produtos-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-produto {
+  border: 0px solid #dddddd00;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  background: rgb(255, 240, 240);
+  min-height: 400px; /* Mudado de rem para px para alinhar com a imagem */
+  height: 100%;
+}
+
+.produto-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.produto-info {
+  color: var(--preto);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.preco-tag {
+  font-weight: bold;
+  color: var(--tag);
+  font-size: 1.2rem;
+  margin-top: auto;
+}
+
+/* --- INTERFACE / FILTROS --- */
+.barra-filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.tags-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag-filtro {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: var(--branco);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+
+.btn-fechar-tag {
+  background: none;
+  color: var(--marrom);
+  border: none;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.btn-fechar-tag:hover {
+  color: var(--vermelho);
+}
+
+.btn-filtros {
+  background-color: var(--texto);
+  color: var(--branco);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-conteudo {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  z-index: 10;
+}
+
+.dropdown-conteudo.mostrar {
+  display: block;
+}
+
+.dropdown-secao button {
+  text-align: start;
+}
+
+.dropdown-secao h4 {
+  margin: 8px 0 4px 0;
+  font-size: 1.1rem;
+  color: var(--texto);
+  text-transform: uppercase;
+  font-family: sans-serif;
+  text-align: start;
+}
+
+.dropdown-secao h3 {
+  margin: 8px 0 4px 0;
+  font-size: 0.79rem;
+  color: var(--preto);
+  text-transform: uppercase;
+  font-family: sans-serif;
+  text-align: start;
+}
+
+.opcao-filtro {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.opcao-filtro:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--preto);
+}
+
+.secao-unidade h2 {
+  width: 90%;
+  margin: 1rem auto 0.5rem 1rem;
+  font-family: sans-serif;
+  color: var(--texto);
 }
 
 @media (max-width: 767px) {
@@ -63,229 +268,13 @@ body{
   }
 }
 
-.tela{
-  padding:0 3rem;
-  width:72rem;
-  height: auto;
-  background-color: none; /* colocar a mesma cor do fundo */
-  border-radius:2rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 100%;
-  max-width: 90%;
-  margin: 0 auto;
-  box-sizing: border-box;
+@media (min-width: 768px) {
+  .produtos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-
-
-.tag-filtro{
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-weight:bold;
-}
-
-
-.linha-filtros{
- width:100%;
- margin-top: 1rem;
- margin-bottom: 1rem;
- height: 0.1rem;
- border-radius: 1rem;
- border:none;
- background-color: var(--texto);
-}
-
-.produtos-grid {
-  width:90%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  gap: 20px;
-  padding: 20px;
-}
-
-
-
-.card-produto {
-  border: 0px solid #dddddd00;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  backdrop-filter: blur(10px);
-  background: rgb(255, 240, 240);
-  min-height: 10rem;
-  height:100%;
-}
-
-
-
-.produto-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover; /* Garante que a foto não fique distorcida */
-}
-
-
-.produto-info {
-  color: var(--preto);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-grow: 1;
-}
-
-.preco-tag {
-  font-weight: bold;
-  color: var(--tag);
-  font-size: 1.2rem;
-  margin-top: auto;
-}
-
-
-.barra-filtros {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.tags-container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* A tag cinza igual ao seu print */
-.tag-filtro {
-  display: flex;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  background-color: var(--branco);
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-family: sans-serif;
-}
-
-/* O botão 'X' dentro da tag cinza */
-.btn-fechar-tag {
-  background:none;
-  color: var(--marrom);
-  border: none;
-  border-radius: 50%;
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-  cursor: pointer;
-  font-size: 0.9rem; 
-  font-weight: bold;
-}
-
-.btn-fechar-tag:hover {
-  color:var(--vermelho);
-}
-
-/* O botão 'Filtros' na direita */
-.btn-filtros {
-  background-color: var(--texto);
-  color: var(--branco);
-  border: none;
-  padding: 10px 24px;
-  border-radius: 12px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Container do botão de filtro para posicionar o menu corretamente */
-.menu-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* O Menu de Opções suspenso (Visual de Vidro/Glassmorphism para combinar) */
-.dropdown-conteudo {
-  
-  display: none; /* Começa escondido */
-  position: absolute;
-  right: 0; /* Alinha o menu pela direita do botão */
-  top: 110%; /* Joga o menu um pouquinho para baixo do botão */
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 15px;
-  z-index: 10; /* Garante que o menu flutue por cima dos cards de produto */
-}
-
-/* Classe que o JS vai colocar/tirar para abrir e fechar o menu */
-.dropdown-conteudo.mostrar {
-  display: block;
-}
-
-.dropdown-secao button{
-  text-align: start;
-}
-
-.dropdown-secao h4 {
-  margin: 8px 0 4px 0;
-  font-size: 1.1rem;
-  color: var(--texto);
-  text-transform: uppercase;
-  font-family: sans-serif;
-  text-align: start;
-}
-
-.dropdown-secao h3{
-  margin: 8px 0 4px 0;
-  font-size: 0.79rem;
-  color: var(--preto);
-  text-transform: uppercase;
-  font-family: sans-serif;
-  text-align: start;
-
-}
-
-/* Botões de opção dentro do menu */
-.opcao-filtro {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 8px 10px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-.opcao-filtro:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  color:var(--preto);
-}
-
-.secao-unidade h2 {
-  width: 90%;
-  margin: 1rem auto 0.5rem 1rem;
-  font-family:sans-serif;
-  color: var(--texto);
-  
-}
-
-/* Garante que as linhas fiquem centralizadas junto com os títulos */
-.linha-filtros {
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 1200px) {
+  .produtos-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
