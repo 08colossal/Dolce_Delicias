@@ -72,6 +72,11 @@ nav {
     
 
 @media (max-width: 768px) {
+    .logo {
+        margin-left: -50px;
+        margin-top: 6vh;
+    }
+
     .nav-list {
         position: absolute;
         top: 8vh;
