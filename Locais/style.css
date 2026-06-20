@@ -3,7 +3,7 @@
 ----------------------------------------*/
 :root{
 --amarelo: #FDB44D;
-  --vermelho: #FF1E2C;
+  --vermelho: #ff0011;
   --preto: rgb(36, 36, 36);
   --branco: white;
   --marrom: rgb(151, 123, 99);
@@ -36,7 +36,7 @@ nav {
     justify-content: space-between !important;
     align-items: center;
     height: 7.5vh;
-    background-color:rgb(255, 0, 0);
+    background-color:var(--vermelho);
     padding: 0 32px;
     position: fixed;
     width: 100vw; 
@@ -64,12 +64,13 @@ nav {
 }
 
 .mobile-menu div {
-    width: 32px;
+    width: 25px;
     height: 2px;
-    background-color: #3D261D;
+    background-color: var(--amarelo);
     margin: 5px 0;
     transition: 0.3s;
 }
+
 
 
 /*SEÇÃO 2.3: RESPONSIVIDADE (MEDIA QUERIES) E ANIMAÇÕES*/
@@ -85,7 +86,7 @@ nav {
         position: relative;
         width: 45vw;
         height: 92vh;
-        background-color: #F9A03F;
+        background-color: #f99f3f00;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -102,7 +103,7 @@ nav {
     .mobile-menu {
         display: block;
         cursor: pointer;
-        size: 10px;
+        width: 0px;
     }
 
     .nav-list.active {
@@ -118,6 +119,7 @@ nav {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+
 }
 
 @keyframes navLinkFade {
