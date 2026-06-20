@@ -32,11 +32,12 @@ body{
 }
 
 nav {
-    display: flex !important;
-    justify-content: space-between !important;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 7.5vh;
-    background-color:var(--vermelho);
+    backdrop-filter: blur(10px);
+    background-color: rgb(255, 0, 0);
     padding: 0 32px;
     position: fixed;
     width: 100vw; 
@@ -47,7 +48,7 @@ nav {
 .nav-list {
     list-style: none;
     display: flex;
-    margin: 0;
+    margin-right: 10vw;
     padding: 0;
 }
 
@@ -103,7 +104,8 @@ nav {
     .mobile-menu {
         display: block;
         cursor: pointer;
-        width: 0px;
+        width: auto;
+        padding: 10px 3rem;
     }
 
     .nav-list.active {
@@ -119,6 +121,7 @@ nav {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+    
 
 }
 
