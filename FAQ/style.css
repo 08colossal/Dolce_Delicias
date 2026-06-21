@@ -170,6 +170,9 @@ nav {
 }
 
 /*& conteúdo */
+.espaço{
+    height: 60px;
+}
 
 .card-faq{
     background-color: none;
