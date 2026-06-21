@@ -3,14 +3,14 @@ const produtos = [
     //? Cardápio Geral (Assados Doces Café Mistos Sucos Executivos Refrigerante)___________________________________________________________________________
     //& Comidas -> assados doces mistos executivos | Bebidas -> refrigerantes agua sucos cafe
     //? ASSADOS
-    {
+    /*{
         id: 1,
         nome: "Dog Especial",
         preco: 10.00,
         imagem: "img/",
         unidades: ["bpk"], // Unidade Biopark
         categorias: ["assados"]
-    },
+    },*/
     {
         id: 2,
         nome: "Dog Cheddar",
@@ -19,7 +19,7 @@ const produtos = [
         unidades: ["bpk"],
         categorias: ["assados"]
     },
-    {
+    /*{
         id: 3,
         nome: "Dog Simples",
         preco: 8.00,
@@ -58,7 +58,7 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"], 
         categorias: ["assados"]
-    },
+    },*/
     {
         id: 8,
         nome: "Coxinha",
@@ -67,7 +67,7 @@ const produtos = [
         unidades: ["bpk", "cantina-bpk"], 
         categorias: ["assados"]
     },
-    {
+    /*{
         id: 9,
         nome: "Pastel",
         preco: 15.00,
@@ -98,7 +98,7 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"], 
         categorias: ["assados"]
-    },
+    },*/
     {
         id: 13,
         nome: "Esfiha de Frango",
@@ -107,14 +107,14 @@ const produtos = [
         unidades: ["bpk"], 
         categorias: ["assados"]
     },
-    {
+    /*{
         id: 14,
         nome: "Queijo e Requeijão",
         preco: 8.00,
         imagem: "img/",
         unidades: ["bpk"], 
         categorias: ["assados"]
-    },
+    },*/
     {
         id: 15,
         nome: "Cento de Salgados",
@@ -140,14 +140,14 @@ const produtos = [
         unidades: ["bpk", "cantina-bpk"], 
         categorias: ["assados"]
     },
-    {
+    /*{
         id: 18,
         nome: "Pão de Queijo Rec.",
         preco: 3.00,
         imagem: "img/",
         unidades: ["bpk", "cantina-bpk"], 
         categorias: ["assados"]
-    },
+    },*/
     {
         id: 19,
         nome: "Empadão",
@@ -694,7 +694,7 @@ const produtos = [
         unidades: ["cantina-bpk"],
         categorias: ["assados"]
     },
-    {
+    /*{
         id: 83,
         nome: "Croissant",
         preco: 9.00,
@@ -725,7 +725,7 @@ const produtos = [
         imagem: "img/",
         unidades: ["cantina-bpk"],
         categorias: ["doces"]
-    },
+    },*/
     {
         id: 87,
         nome: "Docinhos",
@@ -742,14 +742,14 @@ const produtos = [
         unidades: ["cantina-bpk"],
         categorias: ["doces"]
     },
-    {
+    /*{
         id: 89,
         nome: "Suco Tampico Laranja",
         preco: 5.00,
         imagem: "img/",
         unidades: ["cantina-bpk"],
         categorias: ["sucos"]
-    },
+    },*/
     {
         id: 90,
         nome: "Mini pizza",
