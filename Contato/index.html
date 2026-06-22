@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — Dolce Delícia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav >
+            <a href="#"> <img class="logo" src="../img/logo_png.png"></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div> 
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../Home/">Home</a></li>
+                <li><a href="../">Sobre Nós</a></li>
+                <li><a href="../Locais/">Unidades</a></li>
+                <li><a href="../Produtos/">Cardápio</a></li>
+                <li><a href="../FAQ/">FAQ</a></li>
+                <li><a href="../Contato/">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="contact-hero">
+            <p class="eyebrow">Fale com a gente</p>
+            <h1>Adoramos ouvir<br><span>você ✦</span></h1>
+            <p>Dúvidas, encomendas ou apenas um oi — estamos aqui para te atender com todo o carinho.</p>
+        </section>
+
+        <!-- CORPO PRINCIPAL -->
+        <div class="contact-body">
+
+            <!-- COLUNA ESQUERDA -->
+            <div class="contact-info">
+
+                <div class="info-block">
+                    <h3>Telefone</h3>
+                    <a href="tel:+554598064748">(45) 99806-4748</a>
+                </div>
+
+                <div class="info-divider"></div>
+
+                <div class="info-block">
+                    <h3>E-mail</h3>
+                    <a href="mailto:chris.colodel@hotmail.com">chris.colodel@hotmail.com</a>
+                </div>
+
+                <div class="info-divider"></div>
+
+                <div class="info-block">
+                    <h3>Redes Sociais</h3>
+                </div>
+
+                <div class="social-cards">
+                    <a href="https://www.instagram.com/dolcedeliciasoficial/?hl=pt" target="_blank" rel="noopener" class="social-card">
+                        <span class="social-icon ig"><i class="fa-brands fa-instagram"></i></span>
+                        Nosso Instagram
+                    </a>
+                    <a href="https://www.facebook.com/share/1GvRVjRffQ/?mibextid=wwXIfr" class="social-card">
+                        <span class="social-icon fb"><i class="fa-brands fa-facebook-f"></i></span>
+                        Pagina do Facebook
+                    </a>
+                    <a href="https://tinyurl.com/fk9cjxrn" class="social-card">
+                        <span class="social-icon wa"><i class="fa-brands fa-whatsapp"></i></span>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <div class="contact-form-wrapper">
+                <h2>Envie uma mensagem</h2>
+                <p class="form-subtitle">Respondemos em até 24 horas.</p>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" placeholder="Seu sobrenome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(00) 9 0000-0000">
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto">
+                            <option value="" disabled selected>Selecione um assunto</option>
+                            <option value="encomenda">Encomenda de doces</option>
+                            <option value="evento">Evento / Festa</option>
+                            <option value="parceria">Parceria comercial</option>
+                            <option value="duvida">Dúvida geral</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Conte o que você precisa..."></textarea>
+                    </div>
+
+                </div>
+
+                <button class="submit-btn" onclick="enviarFormulario()">Enviar mensagem</button>
+                <div class="success-msg" id="success-msg">
+                    ✓ Mensagem enviada! Em breve entraremos em contato.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAIXA HORÁRIOS / UNIDADES -->
+        <div class="contact-strip">
+            <div class="strip-block">
+                <h3>Horário de Atendimento</h3>
+                <p>
+                    <strong>Segunda a Sexta</strong><br>
+                    08h às 18h<br><br>
+                    <strong>Sábados</strong><br>
+                    09h às 14h
+                </p>
+            </div>
+            <div class="strip-block">
+                <h3>Unidade Biopark</h3>
+                <p>
+                    Toledo — PR<br>
+                    Parque Tecnológico Biopark<br>
+                    <a href="../Locais/" style="color:var(--amarelo);">Ver no mapa →</a>
+                </p>
+            </div>
+            <div class="strip-block">
+                <h3>Unidade Funet</h3>
+                <p>
+                    Toledo — PR<br>
+                    Fundação Educacional de Toledo<br>
+                    <a href="../Locais/" style="color:var(--amarelo);">Ver no mapa →</a>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="footer-content">
+
+            <div id="footer-contacts">
+                <h1>Dolce Delícia</h1>
+                <p>It's all about your dreams.</p>
+                <div id="footer-socialmedia">
+                    <a href="#" class="footer-link" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="footer-link" id="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="footer-link" id="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li><h3>Sobre Nós</h3></li>
+                <li><a href="#" class="footer-link">Quem Somos</a></li>
+                <li><a href="#" class="footer-link">Onde Estamos</a></li>
+                <li><a href="#" class="footer-link">FAQ</a></li>
+            </ul>
+
+            <ul class="footer-list">
+                <li><h3>Cardápio</h3></li>
+                <li><a href="#" class="footer-link">Doces</a></li>
+                <li><a href="#" class="footer-link">Salgados</a></li>
+                <li><a href="#" class="footer-link">Veganos</a></li>
+                <li><a href="#" class="footer-link">Lactose Free</a></li>
+            </ul>
+
+            <div id="footer-subscribe">
+                <h3>Contato</h3>
+                <p><a href="tel:+554599999999" class="footer-link">Telefone</a></p>
+                <p><a href="mailto:chris.colodel@hotmail.com" class="footer-link">E-mail</a></p>
+            </div>
+
+        </div>
+        <div id="footer-copyright">
+            &#169; 2024 Dolce Delícia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        /* Menu mobile — mesma classe do projeto original */
+        class MobileNavbar {
+            constructor(mobileMenu, navList, navLinks) {
+                this.mobileMenu = document.querySelector(mobileMenu);
+                this.navList = document.querySelector(navList);
+                this.navLinks = document.querySelectorAll(navLinks);
+                this.activeClass = "active";
+                this.handleClick = this.handleClick.bind(this);
+            }
+            animateLinks() {
+                this.navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = "";
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+            }
+            handleClick() {
+                this.navList.classList.toggle(this.activeClass);
+                this.mobileMenu.classList.toggle(this.activeClass);
+                this.animateLinks();
+            }
+            addClickEvent() {
+                this.mobileMenu.addEventListener("click", () => this.handleClick());
+            }
+            init() {
+                if (this.mobileMenu) this.addClickEvent();
+                return this;
+            }
+        }
+
+        const mobileNavbar = new MobileNavbar(".mobile-menu", ".nav-list", ".nav-list li");
+        mobileNavbar.init();
+
+        /* Simulação de envio do formulário */
+        function enviarFormulario() {
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensagem = document.getElementById("mensagem").value.trim();
+
+            if (!nome || !email || !mensagem) {
+                alert("Por favor, preencha Nome, E-mail e Mensagem antes de enviar.");
+                return;
+            }
+
+            const btn = document.querySelector(".submit-btn");
+            btn.textContent = "Enviando...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.textContent = "Enviar mensagem";
+                btn.disabled = false;
+                document.getElementById("success-msg").style.display = "block";
+
+                document.getElementById("nome").value = "";
+                document.getElementById("sobrenome").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("telefone").value = "";
+                document.getElementById("assunto").selectedIndex = 0;
+                document.getElementById("mensagem").value = "";
+            }, 1200);
+        }
+    </script>
+
+</body>
+</html>
