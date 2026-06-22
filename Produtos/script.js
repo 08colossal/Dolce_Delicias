@@ -79,7 +79,7 @@ function renderizarTags() {
 }
 
 function gerenciarRemocaoTag(e) {
-  const filtroParaRemover = e.target.getAttribute('data-filtro');
+  const filtroParaRemover = e.currentTarget.getAttribute('data-filtro');
   filtrosAtivos = filtrosAtivos.filter(item => item !== filtroParaRemover);
   renderizarTags();
   filtrarEProjetarProdutos();
