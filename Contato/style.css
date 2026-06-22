@@ -1,4 +1,8 @@
-/* ===== RESETS & VARIÁVEIS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Gasoek+One&family=Homemade+Apple&family=Leckerli+One&family=Momo+Trust+Display&display=swap');
+
+/*&   MENU E CABEÇALHO   */
+
 :root {
     --amarelo: #FDB44D;
     --vermelho: #ff0011;
@@ -178,7 +182,6 @@ body.light-theme {
         transform: rotate(360deg) scale(1.0);
     }
 }
-
 /*&------------------------------------------------------*/
 
 body {
