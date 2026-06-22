@@ -297,7 +297,7 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: bold;
-  z-index: 1005;
+  z-index: 1010;
 }
 
 .btn-fechar-tag:hover {
