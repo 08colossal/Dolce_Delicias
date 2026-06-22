@@ -19,6 +19,9 @@ body{
     margin:0;
     overflow: hidden;
     overflow: scroll;
+    align-items: center;
+    display: flex;
+    background-color: var(--fundo);
 }
 
 ::-webkit-scrollbar {
@@ -173,12 +176,6 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-body {
-  align-items: center;
-  display: flex;
-  background-color: var(--fundo);
-}
-
 /*&     CORPO       */
 
 .tela {
@@ -283,6 +280,7 @@ body {
   border-radius: 20px;
   font-size: 0.9rem;
   font-family: sans-serif;
+  z-index: 1100;
 }
 
 .btn-fechar-tag {
@@ -298,11 +296,12 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: bold;
-  z-index: 1010;
+  z-index: 1100;
 }
 
 .btn-fechar-tag:hover {
   color: var(--vermelho);
+  z-index: 1100;
 }
 
 .btn-filtros {
