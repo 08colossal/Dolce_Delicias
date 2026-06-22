@@ -391,7 +391,7 @@ body {
     max-width: 100% !important;
     padding: 10px !important;
     box-sizing: border-box !important;
-    margin-top: 10vh;
+    margin-top: 15vh !important; /* Aumentado para desgrudar do menu do celular */
   }
 
   .secao-unidade h2 {
@@ -432,9 +432,10 @@ body {
     font-size: 0.75rem !important;
   }
 
-  /* CONSERTO DO DROPDOWN NO CELULAR */
+  /* CONSERTO DO DROPDOWN E FILTROS NO CELULAR */
   .barra-filtros {
-    position: relative;
+    position: relative !important;
+    z-index: 9999 !important; /* Joga os filtros totalmente para a frente no celular */
   }
 
   .dropdown-conteudo {
@@ -445,8 +446,8 @@ body {
     width: 250px !important;
     background: var(--fundo) !important; 
     box-shadow: 0px 8px 24px rgba(0,0,0,0.3) !important;
+    z-index: 10000 !important;
   }
-  
 }
 
 @media (min-width: 768px) {
@@ -456,6 +457,6 @@ body {
 }
 @media (min-width: 1200px) {
   .produtos-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
