@@ -190,7 +190,7 @@ const produtos = [
         imagem: "img/bombom.jpg",
         unidades: ["bpk"], 
         categorias: ["doces"]
-    },
+    },/*
     {
         id: 24,
         nome: "Cone",
@@ -206,12 +206,12 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk", "cantina-bpk"], 
         categorias: ["doces"]
-    },
+    },*/
     {
         id: 26,
         nome: "Donuts",
         preco: 8.50,
-        imagem: "img/",
+        imagem: "img/donuts.jpg",
         unidades: ["bpk", "cantina-bpk"], 
         categorias: ["doces"]
     },
@@ -219,7 +219,7 @@ const produtos = [
         id: 27,
         nome: "Fatia de Bolo",
         preco: 4.00,
-        imagem: "img/",
+        imagem: "img/fatia.jpg",
         unidades: ["bpk", "cantina-bpk"], 
         categorias: ["doces"]
     },
@@ -227,10 +227,10 @@ const produtos = [
         id: 28,
         nome: "Pedaço de Brownie (Grande):",
         preco: 12.00,
-        imagem: "img/",
+        imagem: "img/brownie.jpg",
         unidades: ["bpk"], 
         categorias: ["doces"]
-    },
+    },/*
     {
         id: 29,
         nome: "Pedaço de Brownie (Pequeno)",
@@ -238,14 +238,14 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"], 
         categorias: ["doces"]
-    },
+    },*/
 
     //? MISTOS__________________________________________
     {
         id: 30,
         nome: "Pão, Requeijão, Ovo, Presunto e Queijo",
         preco: 10.50,
-        imagem: "img/",
+        imagem: "img/misto-simples.jpg",
         unidades: ["bpk"], 
         categorias: ["mistos"]
     },
@@ -253,11 +253,11 @@ const produtos = [
         id: 31,
         nome: "Pão, Requeijão, Ovo e Queijo",
         preco: 9.50,
-        imagem: "img/",
+        imagem: "img/misto-ovo.jpg",
         unidades: ["bpk"], 
         categorias: ["mistos"]
     },
-    {
+    /*{
         id: 32,
         nome: "Pão, Requeijão, Queijo e Presunto:",
         preco: 8.50,
@@ -280,17 +280,17 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"], 
         categorias: ["mistos"]
-    },
+    },*/
 
     //? CAFÉ__________________________________________
     {
         id: 35,
         nome: "Café Expresso",
         preco: 6.99,
-        imagem: "img/",
+        imagem: "img/expresso.jpg",
         unidades: ["bpk"], 
         categorias: ["cafe"]
-    },
+    },/*
     {
         id: 36,
         nome: "Café Duplo",
@@ -306,12 +306,12 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"], 
         categorias: ["cafe"]
-    },
+    },*/
     {
         id: 38,
-        nome: "Capuccino Capuccino Italiano",
+        nome: "Cappuccino Italiano",
         preco: 11.99,
-        imagem: "img/",
+        imagem: "img/cappuccino.jpg",
         unidades: ["bpk"], 
         categorias: ["cafe"]
     },
@@ -319,7 +319,7 @@ const produtos = [
         id: 39,
         nome: "Capuccino Brasileiro",
         preco: 10.00,
-        imagem: "img/",
+        imagem: "img/brasileiro.jpg",
         unidades: ["bpk"], 
         categorias: ["cafe"]
     },
@@ -327,7 +327,7 @@ const produtos = [
         id: 40,
         nome: "Chocolate Quente",
         preco: 13.99,
-        imagem: "img/",
+        imagem: "img/choc-quente.jpg",
         unidades: ["bpk"], 
         categorias: ["cafe"]
     },
@@ -338,10 +338,10 @@ const produtos = [
         id: 41,
         nome: "Abacaxi com Hortelã",
         preco: 8.00,
-        imagem: "img/",
+        imagem: "img/suco-amarelo.jpg",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
-    },
+    },/*
     {
         id: 42,
         nome: "Abacaxi com Hortelã ao Leite",
@@ -349,15 +349,15 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
-    },
+    },*/
     {
         id: 43,
         nome: "Morango",
         preco: 8.00,
-        imagem: "img/",
+        imagem: "img/suco-vermelho.jpg",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
-    },
+    },/*
     {
         id: 44,
         nome: "Morango só Leite",
@@ -365,28 +365,28 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
-    },
+    },*/
     {
         id: 45,
         nome: "Maracujá",
         preco: 8.00,
-        imagem: "img/",
+        imagem: "img/suco-amarelo.jpg",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
     },
-    {
+/*    {
         id: 46,
         nome: "Maracujá ao Leite",
         preco: 9.00,
         imagem: "img/",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
-    },
+    },*/
     {
         id: 47,
         nome: "Soda Italiana",
         preco: 10.00,
-        imagem: "img/",
+        imagem: "img/soda.jpg",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["sucos"]
     },
@@ -398,7 +398,7 @@ const produtos = [
         nome: "Strogonoff",
         ingredientes:"Arroz, batata palha e strogonoff de carne",
         preco: 20.00,
-        imagem: "img/",
+        imagem: "img/strogonoff.jpg",
         unidades: ["bpk"],
         categorias: ["executivos"]
     },
@@ -407,7 +407,7 @@ const produtos = [
         nome: "Bife Acebolado",
         ingredientes:"Arroz, feijão, batata rústica, bife acebolado e salada",
         preco: 29.90,
-        imagem: "img/",
+        imagem: "img/bife-acebolado.jpg",
         unidades: ["bpk"],
         categorias: ["executivos"]
     },
@@ -418,10 +418,10 @@ const produtos = [
         id: 50,
         nome: "Mini Coca 200ml",
         preco: 3.50,
-        imagem: "img/",
+        imagem: "img/coca-mini.jpg",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
-    },
+    },/*
     {
         id: 51,
         nome: "Mini Coca 200ml Zero",
@@ -429,12 +429,12 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
-    },
+    },*/
     {
         id: 52,
         nome: "Coca Lata",
         preco: 6.0,
-        imagem: "img/",
+        imagem: "img/coca-lata.jpg",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
     },
@@ -442,10 +442,10 @@ const produtos = [
         id: 53,
         nome: "Coca Zero",
         preco: 6.0,
-        imagem: "img/",
+        imagem: "img/coca-zero.jpg",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
-    },
+    },/*
     {
         id: 54,
         nome: "Coca 2L",
@@ -461,16 +461,16 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
-    },
+    },*/
     {
         id: 56,
         nome: "Monster Vários Sabores",
         preco: 12.00,
-        imagem: "img/",
+        imagem: "img/monster.jpg",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
     },
-    {
+    /*{
         id: 57,
         nome: "Del Valle",
         preco: 5.00,
@@ -501,15 +501,15 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk"],
         categorias: ["agua"]
-    },
+    },*/
     {
         id: 61,
         nome: "Tubaína",
         preco: 5.00,
-        imagem: "img/",
+        imagem: "img/tubaina.jpg",
         unidades: ["bpk"],
         categorias: ["refrigerante"]
-    },
+    },/*
     {
         id: 62,
         nome: "Tubario",
@@ -557,7 +557,7 @@ const produtos = [
         imagem: "img/",
         unidades: ["bpk", "cantina-bpk"],
         categorias: ["agua"]
-    },
+    },*/
 
 
     //^ Cardápio Encomendas (Fritos Sanduíches Assados Doces) ___________________________________________________________________________
@@ -694,11 +694,11 @@ const produtos = [
         unidades: ["cantina-bpk"],
         categorias: ["assados"]
     },
-    /*{
+    {
         id: 83,
         nome: "Croissant",
         preco: 9.00,
-        imagem: "img/",
+        imagem: "img/croissant.jpg",
         unidades: ["cantina-bpk"],
         categorias: ["doces"]
     },
@@ -706,11 +706,11 @@ const produtos = [
         id: 84,
         nome: "Açaí Tradicional",
         preco: 12.00,
-        imagem: "img/",
+        imagem: "img/acai.jpg",
         unidades: ["cantina-bpk"],
         categorias: ["doces"]
     },
-    {
+    /*{
         id: 85,
         nome: "Açaí Leitinho",
         preco: 13.00,
