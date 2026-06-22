@@ -62,7 +62,6 @@ function renderizarTags() {
     const tag = document.createElement('div');
     tag.classList.add('tag-filtro');
     
-    // Unificado o texto e o ícone dentro do mesmo elemento clicável .btn-fechar-tag
     tag.innerHTML = `
       <span class="btn-fechar-tag" data-filtro="${filtro}">
         🗙 ${formatarNomeFiltro(filtro)}
@@ -79,7 +78,6 @@ function renderizarTags() {
 }
 
 function gerenciarRemocaoTag(e) {
-  // .closest garante que o clique funcione tanto no texto quanto no X de forma precisa
   const alvo = e.target.closest('.btn-fechar-tag');
   if (!alvo) return;
 
@@ -88,7 +86,6 @@ function gerenciarRemocaoTag(e) {
   renderizarTags();
   filtrarEProjetarProdutos();
 }
-
 
  //* encomendas bpk cantina-bpk
 function formatarNomeFiltro(nome) {
