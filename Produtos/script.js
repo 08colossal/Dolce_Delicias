@@ -60,18 +60,15 @@ function renderizarTags() {
 
   filtrosAtivos.forEach(filtro => {
     const tag = document.createElement('div');
-
     tag.classList.add('tag-filtro');
     tag.innerHTML = `
-      <span class="btn-fechar-tag" class="${filtro}" data-filtro="${filtro}">🗙
+      <span class="btn-fechar-tag" data-filtro="${filtro}">🗙
         ${formatarNomeFiltro(filtro)}
       </span>
     `;
-
     tagsContainer.appendChild(tag);
   });
 
-  //antes era um botão, agr é apenas o filtro
   document.querySelectorAll('.btn-fechar-tag').forEach(botao => {
     botao.removeEventListener('click', gerenciarRemocaoTag);
     botao.addEventListener('click', gerenciarRemocaoTag);
@@ -79,18 +76,20 @@ function renderizarTags() {
 }
 
 function gerenciarRemocaoTag(e) {
-  const filtroParaRemover = e.currentTarget.getAttribute('data-filtro');
+  e.stopPropagation();
+  const elementoTag = e.target.closest('.btn-fechar-tag');
+  if (!elementoTag) return;
+  
+  const filtroParaRemover = elementoTag.getAttribute('data-filtro');
   filtrosAtivos = filtrosAtivos.filter(item => item !== filtroParaRemover);
   renderizarTags();
   filtrarEProjetarProdutos();
 }
 
- //* encomendas bpk cantina-bpk
 function formatarNomeFiltro(nome) {
   if (nome === 'bpk') return 'Cardápio Geral';
   if (nome === 'cantina-bpk') return 'Cantina Biopark';
   if (nome === 'encomendas') return 'Encomendas';
-
   if (nome === 'assados') return 'Salgados';
 
   return nome.charAt(0).toUpperCase() + nome.slice(1).replace('-', ' ');
