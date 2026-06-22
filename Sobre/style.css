@@ -37,6 +37,109 @@ a:hover {
     --cor-menu-lua: rgb(63, 11, 11);
 }
 
+/* Transições tema */
+*{
+    transition:
+    background-color .5s ease,
+    color .5s ease,
+    border-color .5s ease,
+    box-shadow .5s ease;
+}
+#theme-toggle{
+    position: fixed;
+    top: 7px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color:transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+body.light-theme{
+    background-color: var(--fundo-sol);
+    .instagram-title{
+        color: #3D261D;
+    }
+    .container{
+        color: #3D261D;
+        background-color: var(--cor-menu-sol);
+    }
+    .video-container {
+        background-color: var(--fundo-sol);
+    }
+    .instagram-section {
+        background-color: var(--fundo-sol);
+    }
+    #instagam-info{
+        background-color: var(--fundo-sol);
+    }
+    #footer-contacts h1{
+        color: var(--fundo-sol);
+    }
+    #footer-link{
+        color: var(--fundo-sol);
+    }
+    #footer-content {
+        color: var(--fundo-sol);;
+        background-color: var(--cor-menu-sol);
+    }
+    #footer-subscribe{
+        color: var(--fundo-sol);
+    }
+    #footer-subscribe p {
+        background-color: transparent;
+        color: var(--fundo-sol);
+    }
+    .footer-link{
+        color: var(--fundo-sol);
+    }
+    .footer-list .footer-link {
+        color: var(--fundo-sol);
+    }
+    #footer-copyright {
+        color: var(--fundo-sol);
+    }
+    footer {
+        color: var(--fundo-sol);
+    }
+    nav {
+        background-color: var(--cor-menu-sol);
+    }
+    .meu-botao {
+        background-color:var(--vermelho);
+    }
+    .meu-botao:hover {
+        background-color: #F9A03F;
+        color: var(--fundo) !important;
+    }
+}
+.icon{
+    font-size: 28px;
+    position: fixed;
+    top: 18px;
+    margin-left: auto;
+    margin-right: -2rem;
+}
+.icon.animate{
+    animation: spin 2s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes spin{
+    from{
+        transform:
+        rotate(0deg)
+        scale(1.15);
+    }
+    to{
+        transform:
+        rotate(360deg)
+        scale(1.0);
+    }
+}
+
 body{
     font-family: "Castoro Titling", serif;
     margin:0;
@@ -193,7 +296,7 @@ nav {
 }
 
 /* ==========================================================================
-   SEÇÃO 2.3: APRESENTAÇÃO DA EMPRESA
+   SEÇÃO 2.3: APRESENTAÇÃO DA EMPRESA (OTIMIZADA)
    ========================================================================== */
 
 .container-apresentacao {
@@ -216,27 +319,96 @@ nav {
 }
 
 .coluna-texto {
-  background-color: #ff7913; 
-  padding: 60px;             
+  background-color: var(--fundo-sol); /* Usa o off-white do seu tema para leitura confortável */
+  padding: 60px 80px;             
   display: flex;
   flex-direction: column;    
   justify-content: center;   
-  align-items: center;       
+  align-items: flex-start; /* Alinha o conteúdo à esquerda para melhor fluxo de leitura */
   text-align: justify;       
 }
 
+.subtitulo-apresentacao {
+  color: var(--amarelo);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
 .coluna-texto h2 {
-  font-family: sans-serif;
-  font-size: 24px;
-  margin-bottom: 40px;      
-  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--texto);
+  margin-bottom: 30px;      
+  text-align: left;
+}
+
+.coluna-texto h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fundo-lua);
+  margin: 25px 0 10px 0;
 }
 
 .coluna-texto p {
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;         
+  color: #4a3728; /* Um tom escuro aconchegante */
+  margin-bottom: 15px;
+  max-width: 650px;         
+}
+
+/* Estilização da Citação */
+.citacao-historia {
+  background-color: var(--amarelo);
+  color: var(--fundo-lua);
+  border-left: 5px solid var(--texto);
+  padding: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-weight: 500;
+  border-radius: 0 8px 8px 0;
   font-size: 16px;
-  line-height: 1.6;         
-  max-width: 500px;         
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.boas-vindas {
+  font-weight: 700;
+  color: var(--texto) !important;
+  margin-top: 20px;
+  font-size: 16px !important;
+}
+
+/* Ajustes de Responsividade para Mobile */
+@media (max-width: 768px) {
+    .container-apresentacao {
+        flex-direction: column;
+        min-height: auto;      
+    }
+
+    .coluna-imagem, 
+    .coluna-texto {
+        width: 100%;           
+    }
+
+    .coluna-imagem img {
+        height: 300px; /* Evita que a imagem ocupe a tela inteira no celular */
+        object-fit: cover;
+    }
+
+    .coluna-texto {
+        padding: 40px 24px;    
+    }
+    
+    .coluna-texto h2 {
+        font-size: 26px;
+    }
 }
 
 
