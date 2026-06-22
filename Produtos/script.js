@@ -61,11 +61,14 @@ function renderizarTags() {
   filtrosAtivos.forEach(filtro => {
     const tag = document.createElement('div');
     tag.classList.add('tag-filtro');
+    
+    // Unificado o texto e o ícone dentro do mesmo elemento clicável .btn-fechar-tag
     tag.innerHTML = `
-      <span class="btn-fechar-tag" data-filtro="${filtro}">🗙
-        ${formatarNomeFiltro(filtro)}
+      <span class="btn-fechar-tag" data-filtro="${filtro}">
+        🗙 ${formatarNomeFiltro(filtro)}
       </span>
     `;
+
     tagsContainer.appendChild(tag);
   });
 
@@ -76,20 +79,23 @@ function renderizarTags() {
 }
 
 function gerenciarRemocaoTag(e) {
-  e.stopPropagation();
-  const elementoTag = e.target.closest('.btn-fechar-tag');
-  if (!elementoTag) return;
-  
-  const filtroParaRemover = elementoTag.getAttribute('data-filtro');
+  // .closest garante que o clique funcione tanto no texto quanto no X de forma precisa
+  const alvo = e.target.closest('.btn-fechar-tag');
+  if (!alvo) return;
+
+  const filtroParaRemover = alvo.getAttribute('data-filtro');
   filtrosAtivos = filtrosAtivos.filter(item => item !== filtroParaRemover);
   renderizarTags();
   filtrarEProjetarProdutos();
 }
 
+
+ //* encomendas bpk cantina-bpk
 function formatarNomeFiltro(nome) {
   if (nome === 'bpk') return 'Cardápio Geral';
   if (nome === 'cantina-bpk') return 'Cantina Biopark';
   if (nome === 'encomendas') return 'Encomendas';
+
   if (nome === 'assados') return 'Salgados';
 
   return nome.charAt(0).toUpperCase() + nome.slice(1).replace('-', ' ');
@@ -122,7 +128,7 @@ renderizarTags();
 filtrarEProjetarProdutos();
 
 /* ==========================================================================
-   SEÇÃO: CONFIGURAÇÃO DO MENU MOBILE (SCRIPT)
+   SEÇÃO: CONFIGURAÇÃO DO MENU MOBILE (SCRIPT)
    ========================================================================== */
 
 class MobileNavbar {

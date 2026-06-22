@@ -42,7 +42,7 @@ nav {
     backdrop-filter: blur(10px);
     background-color: rgb(255, 0, 0);
     padding:0 2rem;
-    position: absolute;
+    position: fixed; /* Alterado de absolute para fixed */
     width: 100vw; 
     top: 0;
     z-index: 1000;
