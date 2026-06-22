@@ -68,3 +68,32 @@ botao.addEventListener("click", () => {
         icon.classList.remove("animate");
     },700);
 });
+
+//& -----------  ENVIAR FORMS
+function enviarFormulario() {
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    if (!nome || !email || !mensagem) {
+        alert("Por favor, preencha Nome, E-mail e Mensagem antes de enviar.");
+        return;
+    }
+
+    const btn = document.querySelector(".submit-btn");
+    btn.textContent = "Enviando...";
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btn.textContent = "Enviar mensagem";
+        btn.disabled = false;
+        document.getElementById("success-msg").style.display = "block";
+
+        document.getElementById("nome").value = "";
+        document.getElementById("sobrenome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("telefone").value = "";
+        document.getElementById("assunto").selectedIndex = 0;
+        document.getElementById("mensagem").value = "";
+    }, 1200);
+}
