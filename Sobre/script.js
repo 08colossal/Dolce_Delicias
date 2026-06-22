@@ -48,23 +48,32 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
-/* ==========================================================================
-   SEÇÃO: CONFIGURAÇÃO DO DARK MODE (SCRIPT)
-========================================================================== */
-const botao = document.getElementById("theme-toggle");
-const icon = document.querySelector(".icon");
+const carrossel = document.querySelector('.linha-tempo-carrossel');
+let estaClicado = false;
+let localInicioX;
+let rolagemEsquerda;
 
-botao.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-    icon.classList.add("animate");
+carrossel.addEventListener('mousedown', (e) => {
+  estaClicado = true;
+  carrossel.style.cursor = 'grabbing';
+  localInicioX = e.pageX - carrossel.offsetLeft;
+  rolagemEsquerda = carrossel.scrollLeft;
+});
 
-    if(document.body.classList.contains("dark-theme")){
-        icon.textContent = "🌙";
-    }
-    else{
-        icon.textContent = "☀️";
-    }
-    setTimeout(() => {
-        icon.classList.remove("animate");
-    },700);
+carrossel.addEventListener('mouseleave', () => {
+  estaClicado = false;
+  carrossel.style.cursor = 'grab';
+});
+
+carrossel.addEventListener('mouseup', () => {
+  estaClicado = false;
+  carrossel.style.cursor = 'grab';
+});
+
+carrossel.addEventListener('mousemove', (e) => {
+  if (!estaClicado) return;
+  e.preventDefault();
+  const x = e.pageX - carrossel.offsetLeft;
+  const andar = (x - localInicioX) * 2; // Multiplica por 2 para velocidade do arraste
+  carrossel.scrollLeft = rolagemEsquerda - andar;
 });
