@@ -23,15 +23,18 @@ a:hover {
 
 /*&   MENU E CABEÇALHO   */
 
-:root{
---amarelo: #FDB44D;
-  --vermelho: #ff0011;
-  --preto: rgb(36, 36, 36);
-  --branco: white;
-  --marrom: rgb(151, 123, 99);
-  --fundo: rgb(247, 235, 230);
-  --texto: #d40000;
-  --tag: rgba(226, 155, 0, 0.973);
+:root {
+    --amarelo: #FDB44D;
+    --vermelho: #ff0011;
+    --preto: rgb(36, 36, 36);
+    --branco: white;
+    --marrom: rgb(151, 123, 99);
+    --fundo-sol: rgba(247, 235, 230);
+    --fundo-lua: rgb(46, 24, 13);
+    --texto: #d40000;
+    --tag: rgba(226, 155, 0, 0.973);
+    --cor-menu-sol: red;
+    --cor-menu-lua: rgb(63, 11, 11);
 }
 
 body{

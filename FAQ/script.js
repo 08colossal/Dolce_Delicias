@@ -3,9 +3,9 @@ let cards = document.getElementById("cards"); //pega elemento do html
 for(let i = 0; i < perguntas.length; i++){
     cards.innerHTML +=                      //iinerHTML --> escreve no html!!
         `<details>
-            <summary> ${perguntas[i].pergunta} </summary>
+            <summary class="pergunta"> ${perguntas[i].pergunta} </summary>
             <hr>
-            <p> ${perguntas[i].resposta} </p>
+            <p class="resposta"> ${perguntas[i].resposta} </p>
         </details>`;                        //details cria a lista dropdown :p
 }
 
@@ -59,3 +59,24 @@ const mobileNavbar = new MobileNavbar(
 );
 
 mobileNavbar.init();
+
+/* ==========================================================================
+   SEÇÃO: CONFIGURAÇÃO DO DARK MODE (SCRIPT)
+========================================================================== */
+const botao = document.getElementById("theme-toggle");
+const icon = document.querySelector(".icon");
+
+botao.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+    icon.classList.add("animate");
+
+    if(document.body.classList.contains("light-theme")){
+        icon.textContent = "☀️";
+    }
+    else{
+        icon.textContent = "🌙";
+    }
+    setTimeout(() => {
+        icon.classList.remove("animate");
+    },700);
+});

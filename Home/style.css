@@ -11,9 +11,12 @@
     --preto: rgb(36, 36, 36);
     --branco: white;
     --marrom: rgb(151, 123, 99);
-    --fundo: rgba(0, 0, 0, 0);
+    --fundo-sol: rgba(247, 235, 230);
+    --fundo-lua:rgb(46, 24, 13);
     --texto: #d40000;
     --tag: rgba(226, 155, 0, 0.973);
+    --cor-menu-sol: red;
+    --cor-menu-lua: rgb(63, 11, 11);
 }
 
 * {
@@ -36,7 +39,7 @@
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: var(--fundo);
+    background-color:transparent;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -44,41 +47,58 @@
     align-items:center;
     justify-content:center;
 }
-body.dark-theme{
-    --fundo: rgba(44, 26, 17, 0);
+body.light-theme{
+    background-color: var(--fundo-sol);
     .instagram-title{
-        color: var(--amarelo);
+        color: #3D261D;
+    }
+    .container{
+        color: #3D261D;
+        background-color: var(--cor-menu-sol);
     }
     .video-container {
-        background-color: var(--fundo);
+        background-color: var(--fundo-sol);
     }
     .instagram-section {
-        background-color: var(--fundo);
+        background-color: var(--fundo-sol);
     }
-    .container {
-        background-color: #5a1b1b;
+    #instagam-info{
+        background-color: var(--fundo-sol);
+    }
+    #footer-contacts h1{
+        color: var(--fundo-sol);
+    }
+    #footer-link{
+        color: var(--fundo-sol);
     }
     #footer-content {
-        background-color: #5a1b1b;
+        color: var(--fundo-sol);;
+        background-color: var(--cor-menu-sol);
+    }
+    #footer-subscribe{
+        color: var(--fundo-sol);
     }
     #footer-subscribe p {
-        color: var(--amarelo);
+        background-color: transparent;
+        color: var(--fundo-sol);
+    }
+    .footer-link{
+        color: var(--fundo-sol);
     }
     .footer-list .footer-link {
-        color: var(--amarelo);
+        color: var(--fundo-sol);
     }
     #footer-copyright {
-        background-color: #5a1b1b;
-        color: var(--amarelo);
+        color: var(--fundo-sol);
     }
     footer {
-        color: var(--amarelo);
+        color: var(--fundo-sol);
     }
     nav {
-        background-color: rgb(66, 0, 0);
+        background-color: var(--cor-menu-sol);
     }
     .meu-botao {
-        background-color: #6d4333;
+        background-color:var(--vermelho);
     }
     .meu-botao:hover {
         background-color: #F9A03F;
@@ -115,6 +135,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color:var(--fundo-lua);
 }
 
 ::-webkit-scrollbar {
@@ -151,7 +172,7 @@ nav {
     align-items: center;
     height: 7.5vh;
     backdrop-filter: blur(10px);
-    background-color: rgb(255, 0, 0);
+    background-color:var(--cor-menu-lua);
     padding: 0 2rem;
     position: fixed;
     width: 100vw; 
@@ -299,7 +320,7 @@ nav {
 .video-container {
     width: 100%;
     display: flex;
-    background-color: #F4EED4;
+    background-color: var(--fundo-lua);
     padding: 5rem;
 }
 
@@ -319,7 +340,7 @@ video {
 
 .container {
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
-    background-color: #F9A03F;
+    background-color: var(--cor-menu-lua);
     width: 100%;
     padding: 60px 20px;
     display: flex;
@@ -451,6 +472,10 @@ video {
     filter: brightness(0.9);
 }
 
+.instagram-section{
+    background-color: var(--fundo-lua);
+}
+
 .instagram-info {
     flex: 0 1 400px;
     display: flex;
@@ -459,7 +484,7 @@ video {
 
 .instagram-title {
     font-size: 3rem;
-    color: #3D261D;
+    color: var(--amarelo);
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 20px;
@@ -500,15 +525,17 @@ video {
 footer {
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
     width: 100%;
-    color: #3D261D;
+    color: var(--amarelo);
 }
 
 .footer-link {
     text-decoration: none;
+    color: var(--amarelo);
 }
 
 #footer-content {
-    background-color: #F9A03F;
+    color: var(--amarelo);
+    background-color: var(--cor-menu-lua);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -517,6 +544,7 @@ footer {
 
 #footer-content h1 {
     margin-bottom: 0.75rem;
+    color: var(--amarelo);
 }
 
 #footer-socialmedia {
@@ -566,7 +594,7 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: #3D261D;
+    color: var(--amarelo);
     transition: all 0.4s;
 }
 
@@ -581,17 +609,17 @@ footer {
 }
 
 #footer-subscribe p {
-    color: #3D261D;
+    color: var(--amarelo);
 }
 
 #footer-copyright {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9A03F;
+    background-color: transparent;
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 400;
     width: 100%;
-    color: #3D261D;
+    color: var(--amarelo);
 }
