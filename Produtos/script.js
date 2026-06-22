@@ -1,3 +1,7 @@
+//&---------------------------------------------------------------------
+//&                                         PRODUTOS | FILTROS | CARDS
+//&---------------------------------------------------------------------
+ 
 let filtrosAtivos = []; 
 
 const tagsContainer = document.getElementById('tags-container');
@@ -124,9 +128,10 @@ botoesOpcoes.forEach(botao => {
 renderizarTags();
 filtrarEProjetarProdutos();
 
-/* ==========================================================================
-   SEÇÃO: CONFIGURAÇÃO DO MENU MOBILE (SCRIPT)
-   ========================================================================== */
+
+//*& ---------------------------------------------------------------------------
+//*&  SEÇÃO: CONFIGURAÇÃO DO MENU MOBILE (SCRIPT)
+//*& --------------------------------------------------------------------------
 
 class MobileNavbar {
     constructor(mobileMenu, navList, navLinks) {
@@ -174,9 +179,9 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
-/* ==========================================================================
-   SEÇÃO: CONFIGURAÇÃO DO DARK MODE (SCRIPT)
-========================================================================== */
+//& ==========================================================================
+//&   SEÇÃO: CONFIGURAÇÃO DO DARK MODE (SCRIPT)
+//&========================================================================== */
 const botao = document.getElementById("theme-toggle");
 const icon = document.querySelector(".icon");
 
