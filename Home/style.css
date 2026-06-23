@@ -100,6 +100,7 @@ body.light-theme {
 
     #footer-copyright {
         color: var(--fundo-sol);
+        background-color: var(--cor-menu-sol);
     }
 
     footer {

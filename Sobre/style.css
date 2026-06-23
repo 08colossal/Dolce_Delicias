@@ -27,18 +27,20 @@ a:hover {
 
 :root {
     --amarelo: #FDB44D;
-    --vermelho: #ff0011;
-    --preto: rgb(36, 36, 36);
+    --vermelho: #cf000e;
+    --preto: rgb(10, 10, 10);
     --branco: white;
-    --marrom: rgb(151, 123, 99);
-    --fundo-sol: rgb(236, 226, 212);
+    --marrom: rgb(102, 66, 34);
+    --fundo-sol: #ffe9e0;
     --fundo-lua: rgb(46, 24, 13);
     --texto: #d40000;
     --tag: rgba(226, 155, 0, 0.973);
     --cor-menu-sol: red;
     --cor-menu-lua: rgb(63, 11, 11);
 }
-html, body {
+
+html,
+body {
     overflow-x: hidden;
     position: relative;
     width: 100%;
@@ -80,6 +82,38 @@ body {
 body.light-theme {
     background-color: var(--fundo-sol);
 
+    .coluna-texto {
+        background-color: var(--fundo-sol);
+    }
+
+    .subtitulo-apresentacao {
+        color: var(--marrom);
+    }
+
+    .coluna-texto h2 {
+        color: var(--vermelho);
+    }
+
+    .coluna-texto h3 {
+        color: var(--vermelho);
+        font-weight: 700;
+    }
+
+    .coluna-texto p {
+        color: var(--marrom);
+    }
+
+    .citacao-historia {
+        color: var(--branco);
+        background-color: var(--amarelo);
+        border-left: 5px solid var(--vermelho);
+    }
+
+    .boas-vindas {
+        color: var(--vermelho) !important;
+    }
+
+
     #footer-contacts h1 {
         color: var(--fundo-sol);
     }
@@ -112,6 +146,7 @@ body.light-theme {
     }
 
     #footer-copyright {
+        background-color: var(--cor-menu-sol);
         color: var(--fundo-sol);
     }
 
@@ -126,6 +161,40 @@ body.light-theme {
     .nav-list {
         background-color: transparent;
     }
+    
+    .linha-tempo {
+        background-color: var(--amarelo);
+        color: var(--branco);
+    }
+
+    .titulo-linha {
+        color: var(--vermelho);
+    }
+
+    .cartao-tempo h3 {
+        color: var(--marrom);
+    }
+                
+    .container-fora {
+        background-color: var(--fundo-sol);
+    }
+
+    .container-dentro {
+        background-color:var(--vermelho);
+    }
+
+    .container-itens .item {
+        background-color:rgba(255, 44, 44, 0.5);
+    }
+
+    .container-itens .item h3 {
+        color: var(--amarelo);
+    }
+
+    .container-itens .item p {
+        color: var(--fundo-lua);
+    }
+
 }
 
 .icon {
@@ -224,7 +293,7 @@ nav {
 @media (max-width: 768px) {
     body.light-theme {
         .nav-list {
-            background-color: var(--amarelo);
+            background-color: var(--cor-menu-sol);
         }
     }
 
@@ -244,7 +313,7 @@ nav {
         width: 40vw;
         height: 95vh;
         border-bottom-left-radius: 2rem;
-        background-color: #f99f3f;
+        background-color: var(--cor-menu-lua);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -285,6 +354,8 @@ nav {
         animation: navLinkFade 0.5s ease forwards;
     }
 
+
+
 }
 
 @keyframes navLinkFade {
@@ -318,108 +389,164 @@ nav {
 
 
 .container-apresentacao {
-  display: flex;
-  width: 100%;
-  min-height: 100vh; 
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
 }
 
-.coluna-imagem, 
+.coluna-imagem,
 .coluna-texto {
-  flex: 1; 
-  width: 50%;
+    flex: 1;
+    width: 100%;
 }
 
 .coluna-imagem img {
-  margin-top: 3rem;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
+    margin-top: 7.5vh;
+    width: 100%;
+    height: auto;
+    min-width: 400px;
+    object-fit: cover;
+    display: block;
 }
 
 .coluna-texto {
-  background-color: var(--fundo-sol); 
-  padding: 60px 80px;             
-  display: flex;
-  flex-direction: column;    
-  justify-content: center;   
-  align-items: flex-start; 
-  text-align: justify;       
+    background-color: var(--p);
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: justify;
 }
 
 .subtitulo-apresentacao {
-  margin-top: 3rem;
-  color: var(--amarelo);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  margin-bottom: 5px;
+    margin-top: 3rem;
+    color: var(--amarelo);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-family: "Momo Trust Display", sans-serif;
 }
 
 .coluna-texto h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--texto);
-  margin-bottom: 30px;      
-  text-align: left;
+    font-family: "Castoro Titling", serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--vermelho);
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .coluna-texto h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--fundo-lua);
-  margin: 25px 0 10px 0;
+    font-family: "Castoro Titling", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--amarelo);
+    margin: 25px 0 10px 0;
 }
 
 .coluna-texto p {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  line-height: 1.7;         
-  color: #4a3728; 
-  margin-bottom: 15px;
-  max-width: 650px;         
+    font-family: "Momo Trust Display", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--fundo-sol);
+    margin-bottom: 15px;
+    max-width: 650px;
 }
 
 .citacao-historia {
-  background-color: var(--amarelo);
-  color: var(--fundo-lua);
-  border-left: 5px solid var(--texto);
-  padding: 20px;
-  margin: 30px 0;
-  font-style: italic;
-  font-weight: 500;
-  border-radius: 0 8px 8px 0;
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 650px;
+    background-color: var(--cor-menu-lua);
+    color: var(--amarelo);
+    border-left: 5px solid var(--amarelo);
+    padding: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 650px;
 }
 
 .boas-vindas {
-  font-weight: 700;
-  color: var(--texto) !important;
-  margin-top: 20px;
-  font-size: 16px !important;
+    font-weight: 500;
+    color: var(--vermelho) !important;
+    margin-top: 20px;
+    font-size: 16px !important;
 }
 
+@media (max-width: 767px) {
+    .container-apresentacao {
+        display: flex;
+        flex-direction: column;
+    }
+    .coluna-texto {
+        padding: 10px 10px;
+    }
+    
+    .coluna-imagem img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .subtitulo-apresentacao {
+        letter-spacing: 2px;
+        font-size: 10px;
+    }
+
+    .coluna-texto h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .coluna-texto h3 {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--amarelo);
+        margin: 30px 0 5px 0;
+    }
+
+    .coluna-texto p {
+        font-size: 9px;
+        font-style: normal;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .citacao-historia {
+        padding: 10px;
+        margin: 10px 0;
+        font-weight: 500;
+        font-size: 10px;
+    }
+
+    .boas-vindas {
+        margin-top: 10px;
+        font-size: 10px !important;
+        text-align: center;
+    }
+}
 
 /* ==========================================================================
    SEÇÃO 2.5: VISÃO, MISSÃO E VALORES
    ========================================================================== */
 
-.container-fora{
+.container-fora {
     width: 100%;
-    background-color: rgb(247, 235, 230);
+    background-color: var(--cor-menu-lua);
     padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-dentro{
-    background-color: #FDB44D;
+.container-dentro {
+    background-color: var(--fundo-lua);
     width: 100%;
     max-width: 1200px;
     padding: 3rem;
@@ -429,110 +556,200 @@ nav {
 }
 
 .container-itens {
-  display: flex;
-  flex-direction: row;             
-  flex-wrap: nowrap;               
-  justify-content: space-between;  
-  gap: 30px;                       
-  width: 100%;                     
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
 }
 
 .container-itens .item {
-  flex: 1;                     
-  background-color: #ff7913; 
-  padding: 25px;               
-  border-radius: 8px;          
-  text-align: center;          
+    flex: 1;
+    background-color:#33211c;
+    padding: 25px;
+    border-radius: 10px;
+    text-align:justify;
 }
 
 .container-itens .item h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-family: sans-serif;
-  color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: "Castoro Titling", serif;
+    text-align: center;
+    color: var(--amarelo);
+    font-weight: 900;
 }
 
 .container-itens .item p {
-  font-family: sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #FFFFFF;
+    font-family: "Momo Trust Display", cursive;
+    font-weight: 0;
+    color: var(--fundo-sol);
+    font-size: 14px;
+    line-height: 1.5;
 }
 
+
+@media (max-width: 767px) {
+body.light-theme{
+    .container-dentro {
+        background-color:var(--fundo-sol);
+    }
+
+    .container-itens .item {
+        background-color:rgb(255, 0, 0);
+    }
+}
+.container-fora {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;    
+}
+
+.container-dentro {
+    max-width: 600px;
+    padding:0;
+    border-radius:0;
+    background-color: var(--fundo-lua);
+}
+
+.container-itens {
+    flex-direction: column;
+    gap: 2px;
+}
+
+.container-itens .item {
+    background-color: var(--cor-menu-lua);
+    padding: 10px;
+    border-radius: 0px;
+    
+}
+
+.container-itens .item h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    
+}
+
+.container-itens .item p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+}
 
 /* ==========================================================================
    SEÇÃO 2.5: LINHA DO TEMPO
    ========================================================================== */
 
 .linha-tempo {
-  background-color: rgb(247, 235, 230);
-  padding: 60px 20px;
-  font-family: sans-serif;
-  color: #d40000;
-  overflow: hidden;
+    background-color: var(--fundo-lua);
+    padding: 60px 20px;
+    font-family: sans-serif;
+    color: var(--branco);
+    overflow: hidden;
 }
 
 .titulo-linha {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: var(--amarelo);
 }
 
 .linha-tempo-carrossel {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;         
-  scroll-behavior: smooth;  
-  padding-bottom: 20px;
-  cursor: grab;             
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    cursor: grab;
 }
 
 .linha-tempo-carrossel::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .cartao-tempo {
-  flex: 0 0 350px;          
+    flex: 0 0 350px;
 }
 
 .bloco-imagem {
-  background-color: #d9d9d9;
-  height: 400px;
-  border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333333;
-  font-size: 14px;
-  margin-bottom: 15px;
+    height: 400px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .bloco-imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       
-  border-radius: 16px;     
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
 }
 
 .cartao-tempo h3 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: var(--marrom);
 }
 
 .cartao-tempo p {
-  font-size: 14px;
-  color: #d40000;
-  margin: 0;
+    font-size: 14px;
+    margin: 0;
 }
 
+@media (max-width: 767px) {
+    .linha-tempo {
+        padding: 20px 5px;
+    }
+
+    .titulo-linha {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .linha-tempo-carrossel {
+        gap:6px;
+        margin: 0;
+    }
+
+    .cartao-tempo {
+        display: block ;
+        width: 100px ;
+        min-width: 100px;
+        flex: none;
+        text-align: center;
+    }
+
+    .bloco-imagem {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 10px;   
+    }
+
+    .bloco-imagem img {
+        border-radius: 10px;
+        display: block ;
+    }
+
+    .cartao-tempo h3 {
+        font-size: 10px;
+        margin: 0;
+    }
+}
 
 /*&---------------------------------------
-/*&                               RODAPÉ
+/*&                                 RODAPÉ
 /*&----------------------------------------*/
+
 footer {
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
     width: 100%;
@@ -634,49 +851,53 @@ footer {
 }
 
 #footer-copyright {
-  display: flex;
-  flex-direction: bottom;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--cor-menu-lua);
-  font-size: 0.65rem;
-  padding: 1.5rem;
-  font-weight: 400;
-  width: 100%;
-  color: var(--amarelo);
+    display: flex;
+    flex-direction: bottom;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-menu-lua);
+    font-size: 0.65rem;
+    padding: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    color: var(--amarelo);
 }
-
 
 @media (max-width: 767px) {
-.footer-link {/*telef email*/
-  font-size: 12px;
-}
+    .footer-link {
+        /*telef email*/
+        font-size: 12px;
+    }
 
-#footer-content {/* titulos*/
-  font-size: 14px;
-}
+    #footer-content {
+        /* titulos*/
+        font-size: 14px;
+    }
 
-#footer-content>div,
-#footer-content>ul {
-  flex: 1;
-  min-width: 100px;
-}
+    #footer-content>div,
+    #footer-content>ul {
+        flex: 1;
+        min-width: 100px;
+    }
 
-#footer-content h1 {/*dolce d*/
-  font-size: 25px;
-}
+    #footer-content h1 {
+        /*dolce d*/
+        font-size: 25px;
+    }
 
-#footer-socialmedia .footer-link {
-  height: 1.7rem;
-  width: auto;
-}
-.footer-list .footer-link { /*paginas*/
-  color: var(--amarelo);
-  transition: all 0.4s;
-}
+    #footer-socialmedia .footer-link {
+        height: 1.7rem;
+        width: auto;
+    }
 
-#footer-copyright {
-  font-size: 0.5rem;
-}
+    .footer-list .footer-link {
+        /*paginas*/
+        color: var(--amarelo);
+        transition: all 0.4s;
+    }
+
+    #footer-copyright {
+        font-size: 0.5rem;
+    }
 
 }
