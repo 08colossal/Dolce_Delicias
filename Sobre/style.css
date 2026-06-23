@@ -80,35 +80,6 @@ body {
 body.light-theme {
     background-color: var(--fundo-sol);
 
-    .card-faq details {
-        background-color: var(--fundo-sol);
-    }
-
-    .resposta,
-    .pergunta {
-        color: var(--preto);
-    }
-
-    .card-faq details summary {
-        font-size: 1.2rem;
-        font-weight: bold;
-        cursor: pointer;
-        padding: 1rem 2rem 1rem 1rem;
-    }
-
-    .card-faq details[open] summary {
-        font-weight: bold;
-        background: linear-gradient(to top, var(--preto) 0%, var(--vermelho) 100%);
-        background-clip: text;
-        color: transparent;
-    }
-
-    .card-faq details[open] summary::marker {
-        color: var(--vermelho);
-    }
-
-
-
     #footer-contacts h1 {
         color: var(--fundo-sol);
     }
@@ -154,15 +125,6 @@ body.light-theme {
 
     .nav-list {
         background-color: transparent;
-    }
-
-    .meu-botao {
-        background-color: #6d4333;
-    }
-
-    .meu-botao:hover {
-        background-color: #F9A03F;
-        color: var(--fundo) !important;
     }
 }
 
@@ -354,56 +316,100 @@ nav {
 /*&   CONTEUDO
 /*&   ========================================================================== */
 
+
 .container-apresentacao {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
+  display: flex;
+  width: 100%;
+  min-height: 100vh; 
 }
 
-.coluna-imagem,
+.coluna-imagem, 
 .coluna-texto {
-    flex: 1;
-    width: 50%;
+  flex: 1; 
+  width: 50%;
 }
 
 .coluna-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  margin-top: 3rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
 }
 
 .coluna-texto {
-    background-color: #ff7913;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+  background-color: var(--fundo-sol); 
+  padding: 60px 80px;             
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: flex-start; 
+  text-align: justify;       
+}
+
+.subtitulo-apresentacao {
+  margin-top: 3rem;
+  color: var(--amarelo);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .coluna-texto h2 {
-    font-family: sans-serif;
-    font-size: 24px;
-    margin-bottom: 40px;
-    text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--texto);
+  margin-bottom: 30px;      
+  text-align: left;
+}
+
+.coluna-texto h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fundo-lua);
+  margin: 25px 0 10px 0;
 }
 
 .coluna-texto p {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 500px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;         
+  color: #4a3728; 
+  margin-bottom: 15px;
+  max-width: 650px;         
 }
 
+.citacao-historia {
+  background-color: var(--amarelo);
+  color: var(--fundo-lua);
+  border-left: 5px solid var(--texto);
+  padding: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-weight: 500;
+  border-radius: 0 8px 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.boas-vindas {
+  font-weight: 700;
+  color: var(--texto) !important;
+  margin-top: 20px;
+  font-size: 16px !important;
+}
 
 
 /* ==========================================================================
    SEÇÃO 2.5: VISÃO, MISSÃO E VALORES
    ========================================================================== */
 
-.container-fora {
+.container-fora{
     width: 100%;
     background-color: rgb(247, 235, 230);
     padding: 5rem;
@@ -412,7 +418,7 @@ nav {
     align-items: center;
 }
 
-.container-dentro {
+.container-dentro{
     background-color: #FDB44D;
     width: 100%;
     max-width: 1200px;
@@ -423,103 +429,104 @@ nav {
 }
 
 .container-itens {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 30px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;             
+  flex-wrap: nowrap;               
+  justify-content: space-between;  
+  gap: 30px;                       
+  width: 100%;                     
 }
 
 .container-itens .item {
-    flex: 1;
-    background-color: #ff7913;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
+  flex: 1;                     
+  background-color: #ff7913; 
+  padding: 25px;               
+  border-radius: 8px;          
+  text-align: center;          
 }
 
 .container-itens .item h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-family: sans-serif;
-    color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+  color: #FFFFFF;
 }
 
 .container-itens .item p {
-    font-family: sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #FFFFFF;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #FFFFFF;
 }
+
 
 /* ==========================================================================
    SEÇÃO 2.5: LINHA DO TEMPO
    ========================================================================== */
 
 .linha-tempo {
-    background-color: rgb(247, 235, 230);
-    padding: 60px 20px;
-    font-family: sans-serif;
-    color: #d40000;
-    overflow: hidden;
+  background-color: rgb(247, 235, 230);
+  padding: 60px 20px;
+  font-family: sans-serif;
+  color: #d40000;
+  overflow: hidden;
 }
 
 .titulo-linha {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
 }
 
 .linha-tempo-carrossel {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 20px;
-    cursor: grab;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;         
+  scroll-behavior: smooth;  
+  padding-bottom: 20px;
+  cursor: grab;             
 }
 
 .linha-tempo-carrossel::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .cartao-tempo {
-    flex: 0 0 350px;
+  flex: 0 0 350px;          
 }
 
 .bloco-imagem {
-    background-color: #d9d9d9;
-    height: 400px;
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333333;
-    font-size: 14px;
-    margin-bottom: 15px;
+  background-color: #d9d9d9;
+  height: 400px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .bloco-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       
+  border-radius: 16px;     
+  display: block;
 }
 
 .cartao-tempo h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
 }
 
 .cartao-tempo p {
-    font-size: 14px;
-    color: #d40000;
-    margin: 0;
+  font-size: 14px;
+  color: #d40000;
+  margin: 0;
 }
 
 

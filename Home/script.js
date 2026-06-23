@@ -67,3 +67,4 @@ botao.addEventListener("click", () => {
         icon.classList.remove("animate");
     },700);
 });
+

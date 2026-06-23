@@ -70,3 +70,34 @@ botao.addEventListener("click", () => {
         icon.classList.remove("animate");
     },700);
 });
+
+/* CARROSSEL */
+const carrossel = document.querySelector('.linha-tempo-carrossel');
+let estaClicado = false;
+let localInicioX;
+let rolagemEsquerda;
+
+carrossel.addEventListener('mousedown', (e) => {
+  estaClicado = true;
+  carrossel.style.cursor = 'grabbing';
+  localInicioX = e.pageX - carrossel.offsetLeft;
+  rolagemEsquerda = carrossel.scrollLeft;
+});
+
+carrossel.addEventListener('mouseleave', () => {
+  estaClicado = false;
+  carrossel.style.cursor = 'grab';
+});
+
+carrossel.addEventListener('mouseup', () => {
+  estaClicado = false;
+  carrossel.style.cursor = 'grab';
+});
+
+carrossel.addEventListener('mousemove', (e) => {
+  if (!estaClicado) return;
+  e.preventDefault();
+  const x = e.pageX - carrossel.offsetLeft;
+  const andar = (x - localInicioX) * 2; // Multiplica por 2 para velocidade do arraste
+  carrossel.scrollLeft = rolagemEsquerda - andar;
+});

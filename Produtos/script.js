@@ -24,6 +24,22 @@ const secoes = {
   }
 };
 
+//* vindo do rodapé
+function lerFiltrosDaURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  
+  const categoriasDaUrl = urlParams.getAll('categorias'); 
+  
+  if (categoriasDaUrl.length > 0) {
+    categoriasDaUrl.forEach(cat => {
+      if (!filtrosAtivos.includes(cat)) {
+        filtrosAtivos.push(cat);
+      }
+    });
+  }
+}
+
+//*
 function filtrarEProjetarProdutos() {
   Object.keys(secoes).forEach(chave => {
     if (secoes[chave].grid) secoes[chave].grid.innerHTML = "";
@@ -125,6 +141,7 @@ botoesOpcoes.forEach(botao => {
   });
 });
 
+lerFiltrosDaURL();
 renderizarTags();
 filtrarEProjetarProdutos();
 
