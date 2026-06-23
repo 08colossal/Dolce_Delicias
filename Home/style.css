@@ -359,23 +359,48 @@ nav {
 /* ==========================================================================
    SEÇÃO 2.4: CONTEÚDO PRINCIPAL - VÍDEO DE DESTAQUE
    ========================================================================== */
-
 .video-container {
     width: 100%;
     display: flex;
     background-color: var(--fundo-lua);
-    padding: 5rem;
+    padding: 5rem 2rem;
+    position: relative;
+    justify-content: center;
+}
+
+/*tamanho exato do vídeo */
+.video-container::before {
+    content: "";
+    display: block;
 }
 
 video {
     border-radius: 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 400px;
     height: auto;
     display: block;
-    margin: 50px auto;
+    pointer-events: none; 
 }
 
+#btn-som {
+    position: absolute;
+    bottom: calc(5rem + 20px); 
+    left: calc(50% - 175px); 
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+#btn-som:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.95);
+}
 
 /* ==========================================================================
    SEÇÃO 2.5: CONTEÚDO PRINCIPAL - CARDS DE LOCAIS / PRODUTOS

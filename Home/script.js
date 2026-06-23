@@ -68,3 +68,22 @@ botao.addEventListener("click", () => {
     },700);
 });
 
+/* --------------------------
+                   BTN SOM
+---------------------------- */
+const video = document.getElementById("meuVideo");
+const btnSom = document.getElementById("btn-som");
+
+btnSom.addEventListener("click", () => {
+    if (video.muted) {
+        video.muted = false;
+        video.volume = 1.0; 
+        btnSom.textContent = "🔇";
+        
+        
+        video.play().catch(error => console.log("Erro ao tocar:", error));
+    } else {
+        video.muted = true;
+        btnSom.textContent = "🔊 ";
+    }
+});
