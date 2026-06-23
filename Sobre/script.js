@@ -1,3 +1,5 @@
+
+
 /* ==========================================================================
    SEÇÃO: CONFIGURAÇÃO DO MENU MOBILE (SCRIPT)
    ========================================================================== */
@@ -48,32 +50,23 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
-const carrossel = document.querySelector('.linha-tempo-carrossel');
-let estaClicado = false;
-let localInicioX;
-let rolagemEsquerda;
+/* ==========================================================================
+   SEÇÃO: CONFIGURAÇÃO DO DARK MODE (SCRIPT)
+========================================================================== */
+const botao = document.getElementById("theme-toggle");
+const icon = document.querySelector(".icon");
 
-carrossel.addEventListener('mousedown', (e) => {
-  estaClicado = true;
-  carrossel.style.cursor = 'grabbing';
-  localInicioX = e.pageX - carrossel.offsetLeft;
-  rolagemEsquerda = carrossel.scrollLeft;
-});
+botao.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+    icon.classList.add("animate");
 
-carrossel.addEventListener('mouseleave', () => {
-  estaClicado = false;
-  carrossel.style.cursor = 'grab';
-});
-
-carrossel.addEventListener('mouseup', () => {
-  estaClicado = false;
-  carrossel.style.cursor = 'grab';
-});
-
-carrossel.addEventListener('mousemove', (e) => {
-  if (!estaClicado) return;
-  e.preventDefault();
-  const x = e.pageX - carrossel.offsetLeft;
-  const andar = (x - localInicioX) * 2; // Multiplica por 2 para velocidade do arraste
-  carrossel.scrollLeft = rolagemEsquerda - andar;
+    if(document.body.classList.contains("light-theme")){
+        icon.textContent = "☀️";
+    }
+    else{
+        icon.textContent = "🌙";
+    }
+    setTimeout(() => {
+        icon.classList.remove("animate");
+    },700);
 });

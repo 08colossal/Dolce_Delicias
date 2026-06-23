@@ -12,7 +12,7 @@
     --branco: white;
     --marrom: rgb(151, 123, 99);
     --fundo-sol: rgba(247, 235, 230);
-    --fundo-lua:rgb(46, 24, 13);
+    --fundo-lua: rgb(46, 24, 13);
     --texto: #d40000;
     --tag: rgba(226, 155, 0, 0.973);
     --cor-menu-sol: red;
@@ -26,105 +26,101 @@
 }
 
 /* Transições tema */
-*{
+* {
     transition:
-    background-color .5s ease,
-    color .5s ease,
-    border-color .5s ease,
-    box-shadow .5s ease;
+        background-color .5s ease,
+        color .5s ease,
+        border-color .5s ease,
+        box-shadow .5s ease;
 }
-#theme-toggle{
+
+#theme-toggle {
     position: fixed;
     top: 7px;
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color:transparent;
+    background-color: transparent;
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-body.light-theme{
+
+body.light-theme {
     background-color: var(--fundo-sol);
-    .instagram-title{
-        color: #3D261D;
-    }
-    .container{
-        color: #3D261D;
-        background-color: var(--cor-menu-sol);
-    }
-    .video-container {
-        background-color: var(--fundo-sol);
-    }
-    .instagram-section {
-        background-color: var(--fundo-sol);
-    }
-    #instagam-info{
-        background-color: var(--fundo-sol);
-    }
-    #footer-contacts h1{
+
+    #footer-contacts h1 {
         color: var(--fundo-sol);
     }
-    #footer-link{
+
+    #footer-link {
         color: var(--fundo-sol);
     }
+
     #footer-content {
-        color: var(--fundo-sol);;
+        color: var(--fundo-sol);
+        ;
         background-color: var(--cor-menu-sol);
     }
-    #footer-subscribe{
+
+    #footer-subscribe {
         color: var(--fundo-sol);
     }
+
     #footer-subscribe p {
         background-color: transparent;
         color: var(--fundo-sol);
     }
-    .footer-link{
+
+    .footer-link {
         color: var(--fundo-sol);
     }
+
     .footer-list .footer-link {
         color: var(--fundo-sol);
     }
+
     #footer-copyright {
         color: var(--fundo-sol);
     }
+
     footer {
         color: var(--fundo-sol);
     }
+
     nav {
         background-color: var(--cor-menu-sol);
     }
-    .meu-botao {
-        background-color:var(--vermelho);
-    }
-    .meu-botao:hover {
-        background-color: #F9A03F;
-        color: var(--fundo) !important;
+
+    .nav-list {
+        background-color: transparent;
     }
 }
-.icon{
+
+.icon {
     font-size: 28px;
     position: fixed;
     top: 18px;
     margin-left: auto;
     margin-right: -2rem;
 }
-.icon.animate{
-    animation: spin 2s cubic-bezier(.34,1.56,.64,1);
+
+.icon.animate {
+    animation: spin 2s cubic-bezier(.34, 1.56, .64, 1);
 }
-@keyframes spin{
-    from{
+
+@keyframes spin {
+    from {
         transform:
-        rotate(0deg)
-        scale(1.15);
+            rotate(0deg) scale(1.15);
     }
-    to{
+
+    to {
         transform:
-        rotate(360deg)
-        scale(1.0);
+            rotate(360deg) scale(1.0);
     }
 }
 
@@ -135,12 +131,12 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color:var(--fundo-lua);
+    background-color: var(--fundo-lua);
 }
 
 ::-webkit-scrollbar {
-    width: 0px; 
-    height: 0px; 
+    width: 0px;
+    height: 0px;
 }
 
 a {
@@ -172,14 +168,14 @@ nav {
     align-items: center;
     height: 7.5vh;
     backdrop-filter: blur(10px);
-    background-color:var(--cor-menu-lua);
+    background-color: var(--cor-menu-lua);
     padding: 0 2rem;
     position: fixed;
-    width: 100vw; 
+    width: 100vw;
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
 
 .nav-list {
@@ -295,6 +291,7 @@ nav {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -305,9 +302,11 @@ nav {
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .mobile-menu.active .line2 {
     opacity: 0;
 }
+
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -326,11 +325,11 @@ nav {
 
 video {
     border-radius: 20px;
-    width: 100%;            
-    max-width: 1200px;   
-    height: auto;         
-    display: block;       
-    margin: 50px auto;   
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 50px auto;
 }
 
 
@@ -339,7 +338,7 @@ video {
    ========================================================================== */
 
 .container {
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
     background-color: var(--cor-menu-lua);
     width: 100%;
     padding: 60px 20px;
@@ -348,10 +347,10 @@ video {
 }
 
 .card-list {
-    display: flex;       
-    gap: 30px;          
-    justify-content: center; 
-    flex-wrap: wrap;     
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
     max-width: 1200px;
     width: 100%;
 }
@@ -369,7 +368,7 @@ video {
     backdrop-filter: blur(30px);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card-list .card-item .link-imagem {
@@ -423,7 +422,7 @@ video {
 
 .card-list .card-item .link-imagem:hover .texto-hover {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
 }
 
 
@@ -444,14 +443,14 @@ video {
 .instagram-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px; 
+    gap: 15px;
     flex: 1;
     max-width: 800px;
     width: 100%;
 }
 
 .grid-item {
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -463,7 +462,7 @@ video {
 .grid-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -472,7 +471,7 @@ video {
     filter: brightness(0.9);
 }
 
-.instagram-section{
+.instagram-section {
     background-color: var(--fundo-lua);
 }
 
@@ -499,7 +498,7 @@ video {
 .meu-botao {
     display: inline-block;
     background-color: #3D261D;
-    color: #FFFFFF !important; 
+    color: #FFFFFF !important;
     padding: 12px 24px;
     font-size: 1rem;
     font-weight: 600;
@@ -514,7 +513,7 @@ video {
     background-color: #F9A03F;
     color: #3D261D !important;
     transform: translateY(-2px);
-    opacity: 1; 
+    opacity: 1;
 }
 
 
@@ -523,7 +522,7 @@ video {
    ========================================================================== */
 
 footer {
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
     width: 100%;
     color: var(--amarelo);
 }

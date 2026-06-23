@@ -26,10 +26,10 @@
 /* Transições tema */
 * {
     transition:
-    background-color .5s ease,
-    color .5s ease,
-    border-color .5s ease,
-    box-shadow .5s ease;
+        background-color .5s ease,
+        color .5s ease,
+        border-color .5s ease,
+        box-shadow .5s ease;
 }
 
 #theme-toggle {
@@ -49,69 +49,86 @@
 
 body.light-theme {
     background-color: var(--fundo-sol);
-    
-    .card-faq details{
-        background-color:var(--fundo-sol);
+
+    .card-faq details {
+        background-color: var(--fundo-sol);
     }
 
-    .resposta, .pergunta{
-        color:var(--preto);
+    .resposta,
+    .pergunta {
+        color: var(--preto);
     }
 
-    .card-faq details summary{
+    .card-faq details summary {
         font-size: 1.2rem;
         font-weight: bold;
         cursor: pointer;
         padding: 1rem 2rem 1rem 1rem;
     }
 
-    .card-faq details[open] summary{
+    .card-faq details[open] summary {
         font-weight: bold;
         background: linear-gradient(to top, var(--preto) 0%, var(--vermelho) 100%);
         background-clip: text;
         color: transparent;
     }
 
-    .card-faq details[open] summary::marker{
+    .card-faq details[open] summary::marker {
         color: var(--vermelho);
     }
 
-    
-    #footer-contacts h1{
+
+    #footer-contacts h1 {
         color: var(--fundo-sol);
     }
-    #footer-link{
+
+    #footer-link {
         color: var(--fundo-sol);
     }
+
     #footer-content {
-        color: var(--fundo-sol);;
+        color: var(--fundo-sol);
+        ;
         background-color: var(--cor-menu-sol);
     }
-    #footer-subscribe{
+
+    #footer-subscribe {
         color: var(--fundo-sol);
     }
+
     #footer-subscribe p {
         background-color: transparent;
         color: var(--fundo-sol);
     }
-    .footer-link{
+
+    .footer-link {
         color: var(--fundo-sol);
     }
+
     .footer-list .footer-link {
         color: var(--fundo-sol);
     }
+
     #footer-copyright {
         color: var(--fundo-sol);
     }
+
     footer {
         color: var(--fundo-sol);
     }
+
     nav {
         background-color: var(--cor-menu-sol);
     }
+
+    .nav-list {
+        background-color: transparent;
+    }
+
     .meu-botao {
         background-color: #6d4333;
     }
+
     .meu-botao:hover {
         background-color: #F9A03F;
         color: var(--fundo) !important;
@@ -127,13 +144,14 @@ body.light-theme {
 }
 
 .icon.animate {
-    animation: spin 2s cubic-bezier(.34,1.56,.64,1);
+    animation: spin 2s cubic-bezier(.34, 1.56, .64, 1);
 }
 
 @keyframes spin {
     from {
         transform: rotate(0deg) scale(1.15);
     }
+
     to {
         transform: rotate(360deg) scale(1.0);
     }
@@ -143,24 +161,25 @@ body.light-theme {
 
 
 /*& ----------------------------------
-/*&                             CORPO
+/*&                             menu
 /*&-------------------------------- */
 
-body{
+body {
     font-family: "Castoro Titling", serif;
-    margin:0;
+    margin: 0;
     overflow: hidden;
     overflow: scroll;
     background-color: var(--fundo-lua);
 }
 
-.resposta, .pergunta{
-        color:var(--fundo-sol);
-    }
+.resposta,
+.pergunta {
+    color: var(--fundo-sol);
+}
 
 ::-webkit-scrollbar {
-  width: 0px; 
-  height: 0px; 
+    width: 0px;
+    height: 0px;
 }
 
 .logo {
@@ -180,11 +199,11 @@ nav {
     background-color: var(--cor-menu-lua);
     padding: 0 2rem;
     position: fixed;
-    width: 100vw; 
+    width: 100vw;
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
 
 .nav-list {
@@ -228,7 +247,7 @@ nav {
         margin-top: 6vh;
     }
 
-    .nav{
+    .nav {
         align-items: center;
     }
 
@@ -256,7 +275,7 @@ nav {
         margin-top: 2vh;
     }
 
-    .nav-list a{
+    .nav-list a {
         font-size: 3vw;
         padding: 0;
     }
@@ -287,6 +306,7 @@ nav {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -297,9 +317,11 @@ nav {
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .mobile-menu.active .line2 {
     opacity: 0;
 }
+
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -310,55 +332,55 @@ nav {
 /*&---------------------------------
 /*&                         conteúdo
 /*&-------------------------------- */
-.espaço{
+.espaço {
     height: 60px;
 }
 
-.card-faq{
+.card-faq {
     background-color: none;
-    padding: 2rem;    
+    padding: 2rem;
     margin: 2rem auto;
     width: 50rem;
 }
 
-.card-faq details{
+.card-faq details {
     padding: 1rem;
-    margin-bottom: 1rem;  
+    margin-bottom: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 1.1rem;
-    background-color:var(--cor-menu-lua);
+    background-color: var(--cor-menu-lua);
 }
 
-.card-faq details hr{
+.card-faq details hr {
     width: 100%;
     height: 1px;
     border: none;
-    margin-top:-0.1rem;
+    margin-top: -0.1rem;
 }
 
-.resposta{
-    color:var(--branco);
+.resposta {
+    color: var(--branco);
 }
 
-.card-faq details summary{
+.card-faq details summary {
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     padding: 1rem 2rem 1rem 1rem;
 }
 
-.card-faq details[open] summary{
+.card-faq details[open] summary {
     font-weight: bold;
     background: linear-gradient(to top, var(--amarelo) 0%, var(--amarelo) 100%);
     background-clip: text;
     color: transparent;
 }
 
-.card-faq details[open] summary::marker{
+.card-faq details[open] summary::marker {
     color: var(--amarelo);
 }
 
-.card-faq details p{
+.card-faq details p {
     margin-top: 1rem;
     margin-left: 1.5rem;
 }
@@ -367,7 +389,7 @@ nav {
 /*&                               RODAPÉ
 /*&----------------------------------------*/
 footer {
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
     width: 100%;
     color: var(--amarelo);
     margin-top: auto;
@@ -382,7 +404,7 @@ footer {
     color: var(--amarelo);
     background-color: var(--cor-menu-lua);
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 3rem 3.5rem;
@@ -390,8 +412,8 @@ footer {
 }
 
 /* Garante que cada coluna tenha uma largura base para não esmagar */
-#footer-content > div, 
-#footer-content > ul {
+#footer-content>div,
+#footer-content>ul {
     flex: 1;
     min-width: 200px;
 }

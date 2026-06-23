@@ -3,6 +3,7 @@
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Gasoek+One&family=Homemade+Apple&family=Leckerli+One&family=Momo+Trust+Display&display=swap');
 
 * {
     margin: 0;
@@ -21,7 +22,8 @@ a:hover {
     opacity: 0.8;
 }
 
-/*&   MENU E CABEÇALHO   */
+/*&   DARKMODE   */
+
 
 :root {
     --amarelo: #FDB44D;
@@ -29,7 +31,7 @@ a:hover {
     --preto: rgb(36, 36, 36);
     --branco: white;
     --marrom: rgb(151, 123, 99);
-    --fundo-sol: rgba(247, 235, 230);
+    --fundo-sol: rgb(236, 226, 212);
     --fundo-lua: rgb(46, 24, 13);
     --texto: #d40000;
     --tag: rgba(226, 155, 0, 0.973);
@@ -37,16 +39,163 @@ a:hover {
     --cor-menu-lua: rgb(63, 11, 11);
 }
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Transições tema */
+* {
+    transition:
+        background-color .5s ease,
+        color .5s ease,
+        border-color .5s ease,
+        box-shadow .5s ease;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 7px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.light-theme {
+    background-color: var(--fundo-sol);
+
+    .card-faq details {
+        background-color: var(--fundo-sol);
+    }
+
+    .resposta,
+    .pergunta {
+        color: var(--preto);
+    }
+
+    .card-faq details summary {
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 1rem 2rem 1rem 1rem;
+    }
+
+    .card-faq details[open] summary {
+        font-weight: bold;
+        background: linear-gradient(to top, var(--preto) 0%, var(--vermelho) 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .card-faq details[open] summary::marker {
+        color: var(--vermelho);
+    }
+
+
+
+    #footer-contacts h1 {
+        color: var(--fundo-sol);
+    }
+
+    #footer-link {
+        color: var(--fundo-sol);
+    }
+
+    #footer-content {
+        color: var(--fundo-sol);
+        ;
+        background-color: var(--cor-menu-sol);
+    }
+
+    #footer-subscribe {
+        color: var(--fundo-sol);
+    }
+
+    #footer-subscribe p {
+        background-color: transparent;
+        color: var(--fundo-sol);
+    }
+
+    .footer-link {
+        color: var(--fundo-sol);
+    }
+
+    .footer-list .footer-link {
+        color: var(--fundo-sol);
+    }
+
+    #footer-copyright {
+        color: var(--fundo-sol);
+    }
+
+    footer {
+        color: var(--fundo-sol);
+    }
+
+    nav {
+        background-color: var(--cor-menu-sol);
+    }
+
+    .nav-list {
+        background-color: transparent;
+    }
+
+    .meu-botao {
+        background-color: #6d4333;
+    }
+
+    .meu-botao:hover {
+        background-color: #F9A03F;
+        color: var(--fundo) !important;
+    }
+}
+
+.icon {
+    font-size: 28px;
+    position: fixed;
+    top: 18px;
+    margin-left: auto;
+    margin-right: -2rem;
+}
+
+.icon.animate {
+    animation: spin 2s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) scale(1.15);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.0);
+    }
+}
+
+
+/*& ----------------------------------
+/*&                             MENU
+/*&-------------------------------- */
+
+body {
     font-family: "Castoro Titling", serif;
-    margin:0;
+    margin: 0;
     overflow: hidden;
     overflow: scroll;
+    background-color: var(--fundo-lua);
 }
 
 ::-webkit-scrollbar {
-  width: 0px; 
-  height: 0px; 
+    width: 0px;
+    height: 0px;
 }
 
 .logo {
@@ -63,13 +212,14 @@ nav {
     align-items: center;
     height: 7.5vh;
     backdrop-filter: blur(10px);
-    background-color: rgb(255, 0, 0);
-    padding:0 2rem;
-    position: absolute;
-    width: 100vw; 
+    background-color: var(--cor-menu-lua);
+    padding: 0 2rem;
+    position: fixed;
+    width: 100vw;
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
 
 .nav-list {
@@ -77,6 +227,7 @@ nav {
     display: flex;
     margin-right: 10vw;
     padding: 0;
+    background-color: transparent;
 }
 
 .nav-list li {
@@ -84,13 +235,10 @@ nav {
     margin-left: 35px;
 }
 
-.nav-list a{
-    /*font-family: "Leckerli One", cursive;
-    font-family: "Gasoek One", sans-serif;
-    font-family: "Castoro Titling", serif;*/
+.nav-list a {
     font-family: "Momo Trust Display", sans-serif;
     font-weight: 400;
-    color:var(--branco);
+    color: var(--branco);
     text-decoration: none;
 }
 
@@ -111,12 +259,18 @@ nav {
 
 
 @media (max-width: 768px) {
+    body.light-theme {
+        .nav-list {
+            background-color: var(--amarelo);
+        }
+    }
+
     .logo {
         margin-left: -2rem;
         margin-top: 6vh;
     }
 
-    .nav{
+    .nav {
         align-items: center;
     }
 
@@ -144,7 +298,7 @@ nav {
         margin-top: 2vh;
     }
 
-    .nav-list a{
+    .nav-list a {
         font-size: 3vw;
         padding: 0;
     }
@@ -175,6 +329,7 @@ nav {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -185,145 +340,69 @@ nav {
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .mobile-menu.active .line2 {
     opacity: 0;
 }
+
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* ==========================================================================
-   SEÇÃO 2.3: APRESENTAÇÃO DA EMPRESA
-   ========================================================================== */
+/*& ==========================================================================
+/*&   CONTEUDO
+/*&   ========================================================================== */
 
 .container-apresentacao {
-  display: flex;
-  width: 100%;
-  min-height: 100vh; 
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
 }
 
-.coluna-imagem, 
+.coluna-imagem,
 .coluna-texto {
-  flex: 1; 
-  width: 50%;
+    flex: 1;
+    width: 50%;
 }
 
 .coluna-imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .coluna-texto {
-  background-color: #ff7913; 
-  padding: 60px;             
-  display: flex;
-  flex-direction: column;    
-  justify-content: center;   
-  align-items: center;       
-  text-align: justify;       
+    background-color: #ff7913;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
 }
 
 .coluna-texto h2 {
-  font-family: sans-serif;
-  font-size: 24px;
-  margin-bottom: 40px;      
-  text-align: center;
+    font-family: sans-serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .coluna-texto p {
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 1.6;         
-  max-width: 500px;         
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
 }
 
 
-/* ==========================================================================
-   SEÇÃO 2.4: RESPONSIVIDADE (MEDIA QUERIES) E ANIMAÇÕES
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 45vw;
-        height: 92vh;
-        background-color: rgb(255, 0, 0);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-        z-index: 10;
-    }
-
-    .nav-list li {
-        margin: 0;
-        opacity: 0;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .nav-list.active {
-        transform: translateX(0);
-    }
-
-    .container-apresentacao {
-        flex-direction: column;
-        min-height: auto;      
-    }
-
-    .coluna-imagem, 
-    .coluna-texto {
-        width: 100%;           
-    }
-
-    .coluna-imagem img {
-        height: auto;          
-        object-fit: contain;
-    }
-
-    .coluna-texto {
-        padding: 40px 20px;    
-    }
-
-    .coluna-texto h2 {
-        margin-bottom: 20px;   
-    }
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Efeito de X no menu mobile quando ativo */
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
 
 /* ==========================================================================
    SEÇÃO 2.5: VISÃO, MISSÃO E VALORES
    ========================================================================== */
 
-.container-fora{
+.container-fora {
     width: 100%;
     background-color: rgb(247, 235, 230);
     padding: 5rem;
@@ -332,7 +411,7 @@ nav {
     align-items: center;
 }
 
-.container-dentro{
+.container-dentro {
     background-color: #FDB44D;
     width: 100%;
     max-width: 1200px;
@@ -343,34 +422,34 @@ nav {
 }
 
 .container-itens {
-  display: flex;
-  flex-direction: row;             
-  flex-wrap: nowrap;               
-  justify-content: space-between;  
-  gap: 30px;                       
-  width: 100%;                     
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
 }
 
 .container-itens .item {
-  flex: 1;                     
-  background-color: #ff7913; 
-  padding: 25px;               
-  border-radius: 8px;          
-  text-align: center;          
+    flex: 1;
+    background-color: #ff7913;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .container-itens .item h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-family: sans-serif;
-  color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    color: #FFFFFF;
 }
 
 .container-itens .item p {
-  font-family: sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -378,94 +457,107 @@ nav {
    ========================================================================== */
 
 .linha-tempo {
-  background-color: rgb(247, 235, 230);
-  padding: 60px 20px;
-  font-family: sans-serif;
-  color: #d40000;
-  overflow: hidden;
+    background-color: rgb(247, 235, 230);
+    padding: 60px 20px;
+    font-family: sans-serif;
+    color: #d40000;
+    overflow: hidden;
 }
 
 .titulo-linha {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
 }
 
 .linha-tempo-carrossel {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;         
-  scroll-behavior: smooth;  
-  padding-bottom: 20px;
-  cursor: grab;             
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    cursor: grab;
 }
 
 .linha-tempo-carrossel::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .cartao-tempo {
-  flex: 0 0 350px;          
+    flex: 0 0 350px;
 }
 
 .bloco-imagem {
-  background-color: #d9d9d9;
-  height: 400px;
-  border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333333;
-  font-size: 14px;
-  margin-bottom: 15px;
+    background-color: #d9d9d9;
+    height: 400px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .bloco-imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       
-  border-radius: 16px;     
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
 }
 
 .cartao-tempo h3 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
 }
 
 .cartao-tempo p {
-  font-size: 14px;
-  color: #d40000;
-  margin: 0;
+    font-size: 14px;
+    color: #d40000;
+    margin: 0;
 }
 
 
-/* ==========================================================================
-   SEÇÃO 2.7: RODAPÉ da PÁGINA (FOOTER)
-   ========================================================================== */
-
+/*&---------------------------------------
+/*&                               RODAPÉ
+/*&----------------------------------------*/
 footer {
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
     width: 100%;
-    color: #3D261D;
+    color: var(--amarelo);
+    margin-top: auto;
 }
 
 .footer-link {
     text-decoration: none;
+    color: var(--amarelo);
 }
 
 #footer-content {
-    background-color: rgb(255, 0, 0);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    color: var(--amarelo);
+    background-color: var(--cor-menu-lua);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding: 3rem 3.5rem;
     gap: 2rem;
 }
 
+/* Garante que cada coluna tenha uma largura base para não esmagar */
+#footer-content>div,
+#footer-content>ul {
+    flex: 1;
+    min-width: 200px;
+}
+
 #footer-content h1 {
     margin-bottom: 0.75rem;
+    color: var(--amarelo);
 }
 
 #footer-socialmedia {
@@ -515,7 +607,7 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: #FFFFFF;
+    color: var(--amarelo);
     transition: all 0.4s;
 }
 
@@ -530,17 +622,17 @@ footer {
 }
 
 #footer-subscribe p {
-    color: #3D261D;
+    color: var(--amarelo);
 }
 
 #footer-copyright {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 0, 0);
+    background-color: transparent;
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 400;
     width: 100%;
-    color: #3D261D;
+    color: var(--amarelo);
 }
