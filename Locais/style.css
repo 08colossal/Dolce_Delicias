@@ -413,13 +413,48 @@ footer {
 }
 
 #footer-copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    font-size: 0.9rem;
-    padding: 1.5rem;
-    font-weight: 400;
-    width: 100%;
-    color: var(--amarelo);
+  display: flex;
+  flex-direction: bottom;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-menu-lua);
+  font-size: 0.65rem;
+  padding: 1.5rem;
+  font-weight: 400;
+  width: 100%;
+  color: var(--amarelo);
+}
+
+@media (max-width: 767px) {
+.footer-link {/*telef email*/
+  font-size: 12px;
+}
+
+#footer-content {/* titulos*/
+  font-size: 14px;
+}
+
+#footer-content>div,
+#footer-content>ul {
+  flex: 1;
+  min-width: 100px;
+}
+
+#footer-content h1 {/*dolce d*/
+  font-size: 25px;
+}
+
+#footer-socialmedia .footer-link {
+  height: 1.7rem;
+  width: auto;
+}
+.footer-list .footer-link { /*paginas*/
+  color: var(--amarelo);
+  transition: all 0.4s;
+}
+
+#footer-copyright {
+  font-size: 0.5rem;
+}
+
 }
